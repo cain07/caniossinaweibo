@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CSTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -24,28 +25,12 @@
     self.window.backgroundColor = [UIColor yellowColor];
     
     //创建tabbar
-    UITabBarController *tbc = [[UITabBarController alloc]init];
+    CSTabBarController *tbc = [[CSTabBarController alloc]init];
     
     tbc.view.backgroundColor = [UIColor redColor];
     
     self.window.rootViewController = tbc;
     
-    //首页
-    UIViewController *home = [[UIViewController alloc]init];
-    home.view.backgroundColor = [UIColor greenColor];
-    [tbc addChildViewController:home];
-    //消息
-    UIViewController *message = [[UIViewController alloc]init];
-    message.view.backgroundColor = [UIColor greenColor];
-    [tbc addChildViewController:message];
-    //首页
-    UIViewController *discover = [[UIViewController alloc]init];
-    discover.view.backgroundColor = [UIColor greenColor];
-    [tbc addChildViewController:discover];
-    //我的
-    UIViewController *profile = [[UIViewController alloc]init];
-    profile.view.backgroundColor = [UIColor greenColor];
-    [tbc addChildViewController:profile];
     
     NSLog(@"%@",application.windows);
     
