@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  CSTabBar.h
 //  sina
 //
-//  Created by cain on 16/9/1.
+//  Created by cain on 16/9/2.
 //  Copyright © 2016年 cain. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CSTabBar : UITabBar
 
 @end
-

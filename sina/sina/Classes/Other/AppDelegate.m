@@ -32,11 +32,11 @@
     self.window.rootViewController = tbc;
     
     
-    NSLog(@"%@",application.windows);
+    //NSLog(@"%@",application.windows);
     
     [self.window makeKeyAndVisible];
     
-    NSLog(@"%@",application.windows);
+    //NSLog(@"%@",application.windows);
     
     return YES;
 }

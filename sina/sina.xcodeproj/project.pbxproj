@@ -7,26 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		040A489F1D786EE50055F5DB /* CSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A489E1D786EE50055F5DB /* CSTabBarController.m */; };
 		040A48A11D7872F80055F5DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040A48A01D7872F80055F5DB /* Assets.xcassets */; };
-		040A48A41D7874EF0055F5DB /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A48A31D7874EF0055F5DB /* UIImage+Image.m */; };
-		A4F5ECD21D77E0AF00BAA822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F5ECD11D77E0AE00BAA822 /* main.m */; };
-		A4F5ECD51D77E0AF00BAA822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F5ECD41D77E0AF00BAA822 /* AppDelegate.m */; };
 		A4F5ECEA1D7834CB00BAA822 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4F5ECE91D7834CB00BAA822 /* LaunchScreen.xib */; };
+		A4F5ED0E1D79905F00BAA822 /* CSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F5ECFA1D79905F00BAA822 /* CSTabBarController.m */; };
+		A4F5ED0F1D79905F00BAA822 /* CSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F5ECFE1D79905F00BAA822 /* CSTabBar.m */; };
+		A4F5ED101D79905F00BAA822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F5ED051D79905F00BAA822 /* AppDelegate.m */; };
+		A4F5ED111D79905F00BAA822 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F5ED081D79905F00BAA822 /* UIImage+Image.m */; };
+		A4F5ED121D79905F00BAA822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F5ED091D79905F00BAA822 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		040A489D1D786EE50055F5DB /* CSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTabBarController.h; sourceTree = "<group>"; };
-		040A489E1D786EE50055F5DB /* CSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTabBarController.m; sourceTree = "<group>"; };
 		040A48A01D7872F80055F5DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		040A48A21D7874EF0055F5DB /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
-		040A48A31D7874EF0055F5DB /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		A4F5ECCD1D77E0AE00BAA822 /* sina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sina.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4F5ECD11D77E0AE00BAA822 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A4F5ECD31D77E0AF00BAA822 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A4F5ECD41D77E0AF00BAA822 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A4F5ECE11D77E0AF00BAA822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4F5ECE91D7834CB00BAA822 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		A4F5ECF91D79905F00BAA822 /* CSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTabBarController.h; sourceTree = "<group>"; };
+		A4F5ECFA1D79905F00BAA822 /* CSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTabBarController.m; sourceTree = "<group>"; };
+		A4F5ECFD1D79905F00BAA822 /* CSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTabBar.h; sourceTree = "<group>"; };
+		A4F5ECFE1D79905F00BAA822 /* CSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTabBar.m; sourceTree = "<group>"; };
+		A4F5ED041D79905F00BAA822 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A4F5ED051D79905F00BAA822 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A4F5ED071D79905F00BAA822 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
+		A4F5ED081D79905F00BAA822 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
+		A4F5ED091D79905F00BAA822 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,16 +62,11 @@
 		A4F5ECCF1D77E0AE00BAA822 /* sina */ = {
 			isa = PBXGroup;
 			children = (
+				A4F5ECEE1D79905F00BAA822 /* Classes */,
 				040A48A01D7872F80055F5DB /* Assets.xcassets */,
-				A4F5ECD31D77E0AF00BAA822 /* AppDelegate.h */,
-				A4F5ECD41D77E0AF00BAA822 /* AppDelegate.m */,
 				A4F5ECE11D77E0AF00BAA822 /* Info.plist */,
 				A4F5ECD01D77E0AE00BAA822 /* Supporting Files */,
 				A4F5ECE91D7834CB00BAA822 /* LaunchScreen.xib */,
-				040A489D1D786EE50055F5DB /* CSTabBarController.h */,
-				040A489E1D786EE50055F5DB /* CSTabBarController.m */,
-				040A48A21D7874EF0055F5DB /* UIImage+Image.h */,
-				040A48A31D7874EF0055F5DB /* UIImage+Image.m */,
 			);
 			path = sina;
 			sourceTree = "<group>";
@@ -76,9 +74,200 @@
 		A4F5ECD01D77E0AE00BAA822 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A4F5ECD11D77E0AE00BAA822 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A4F5ECEE1D79905F00BAA822 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A4F5ECEF1D79905F00BAA822 /* Discover(发现) */,
+				A4F5ECF31D79905F00BAA822 /* Home(首页) */,
+				A4F5ECF71D79905F00BAA822 /* Main */,
+				A4F5ECFF1D79905F00BAA822 /* Message(消息) */,
+				A4F5ED031D79905F00BAA822 /* Other */,
+				A4F5ED0A1D79905F00BAA822 /* Profile(我) */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A4F5ECEF1D79905F00BAA822 /* Discover(发现) */ = {
+			isa = PBXGroup;
+			children = (
+				A4F5ECF01D79905F00BAA822 /* Controller */,
+				A4F5ECF11D79905F00BAA822 /* Model */,
+				A4F5ECF21D79905F00BAA822 /* View */,
+			);
+			path = "Discover(发现)";
+			sourceTree = "<group>";
+		};
+		A4F5ECF01D79905F00BAA822 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4F5ECF11D79905F00BAA822 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4F5ECF21D79905F00BAA822 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A4F5ECF31D79905F00BAA822 /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				A4F5ECF41D79905F00BAA822 /* Controller */,
+				A4F5ECF51D79905F00BAA822 /* Model */,
+				A4F5ECF61D79905F00BAA822 /* View */,
+			);
+			path = "Home(首页)";
+			sourceTree = "<group>";
+		};
+		A4F5ECF41D79905F00BAA822 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4F5ECF51D79905F00BAA822 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4F5ECF61D79905F00BAA822 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A4F5ECF71D79905F00BAA822 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A4F5ECF81D79905F00BAA822 /* Controller */,
+				A4F5ECFB1D79905F00BAA822 /* Model */,
+				A4F5ECFC1D79905F00BAA822 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A4F5ECF81D79905F00BAA822 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4F5ECF91D79905F00BAA822 /* CSTabBarController.h */,
+				A4F5ECFA1D79905F00BAA822 /* CSTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4F5ECFB1D79905F00BAA822 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4F5ECFC1D79905F00BAA822 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4F5ECFD1D79905F00BAA822 /* CSTabBar.h */,
+				A4F5ECFE1D79905F00BAA822 /* CSTabBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A4F5ECFF1D79905F00BAA822 /* Message(消息) */ = {
+			isa = PBXGroup;
+			children = (
+				A4F5ED001D79905F00BAA822 /* Controller */,
+				A4F5ED011D79905F00BAA822 /* Model */,
+				A4F5ED021D79905F00BAA822 /* View */,
+			);
+			path = "Message(消息)";
+			sourceTree = "<group>";
+		};
+		A4F5ED001D79905F00BAA822 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4F5ED011D79905F00BAA822 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4F5ED021D79905F00BAA822 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A4F5ED031D79905F00BAA822 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				A4F5ED041D79905F00BAA822 /* AppDelegate.h */,
+				A4F5ED051D79905F00BAA822 /* AppDelegate.m */,
+				A4F5ED061D79905F00BAA822 /* Category */,
+				A4F5ED091D79905F00BAA822 /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		A4F5ED061D79905F00BAA822 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				A4F5ED071D79905F00BAA822 /* UIImage+Image.h */,
+				A4F5ED081D79905F00BAA822 /* UIImage+Image.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		A4F5ED0A1D79905F00BAA822 /* Profile(我) */ = {
+			isa = PBXGroup;
+			children = (
+				A4F5ED0B1D79905F00BAA822 /* Controller */,
+				A4F5ED0C1D79905F00BAA822 /* Model */,
+				A4F5ED0D1D79905F00BAA822 /* View */,
+			);
+			path = "Profile(我)";
+			sourceTree = "<group>";
+		};
+		A4F5ED0B1D79905F00BAA822 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4F5ED0C1D79905F00BAA822 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4F5ED0D1D79905F00BAA822 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,10 +341,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				040A489F1D786EE50055F5DB /* CSTabBarController.m in Sources */,
-				040A48A41D7874EF0055F5DB /* UIImage+Image.m in Sources */,
-				A4F5ECD51D77E0AF00BAA822 /* AppDelegate.m in Sources */,
-				A4F5ECD21D77E0AF00BAA822 /* main.m in Sources */,
+				A4F5ED121D79905F00BAA822 /* main.m in Sources */,
+				A4F5ED0E1D79905F00BAA822 /* CSTabBarController.m in Sources */,
+				A4F5ED111D79905F00BAA822 /* UIImage+Image.m in Sources */,
+				A4F5ED0F1D79905F00BAA822 /* CSTabBar.m in Sources */,
+				A4F5ED101D79905F00BAA822 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
