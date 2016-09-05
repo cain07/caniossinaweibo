@@ -90,6 +90,11 @@
 //    [self addChildViewController:nvc];
 }
 
+#pragma mark - 当点击tabBar上的按钮调用
+- (void)tabBar:(CSTabBar *)tabBar didClickButton:(NSInteger)index
+{
+    self.selectedIndex = index;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

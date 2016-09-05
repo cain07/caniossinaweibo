@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		040A48A11D7872F80055F5DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040A48A01D7872F80055F5DB /* Assets.xcassets */; };
+		040A48A71D7DA65E0055F5DB /* CSBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A48A61D7DA65E0055F5DB /* CSBarButton.m */; };
 		A4F5ECEA1D7834CB00BAA822 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4F5ECE91D7834CB00BAA822 /* LaunchScreen.xib */; };
 		A4F5ED0E1D79905F00BAA822 /* CSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F5ECFA1D79905F00BAA822 /* CSTabBarController.m */; };
 		A4F5ED0F1D79905F00BAA822 /* CSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F5ECFE1D79905F00BAA822 /* CSTabBar.m */; };
@@ -18,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		040A48A01D7872F80055F5DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		040A48A51D7DA65E0055F5DB /* CSBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSBarButton.h; sourceTree = "<group>"; };
+		040A48A61D7DA65E0055F5DB /* CSBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSBarButton.m; sourceTree = "<group>"; };
 		A4F5ECCD1D77E0AE00BAA822 /* sina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F5ECE11D77E0AF00BAA822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4F5ECE91D7834CB00BAA822 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -184,6 +187,8 @@
 			children = (
 				A4F5ECFD1D79905F00BAA822 /* CSTabBar.h */,
 				A4F5ECFE1D79905F00BAA822 /* CSTabBar.m */,
+				040A48A51D7DA65E0055F5DB /* CSBarButton.h */,
+				040A48A61D7DA65E0055F5DB /* CSBarButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4F5ED121D79905F00BAA822 /* main.m in Sources */,
+				040A48A71D7DA65E0055F5DB /* CSBarButton.m in Sources */,
 				A4F5ED0E1D79905F00BAA822 /* CSTabBarController.m in Sources */,
 				A4F5ED111D79905F00BAA822 /* UIImage+Image.m in Sources */,
 				A4F5ED0F1D79905F00BAA822 /* CSTabBar.m in Sources */,

@@ -8,12 +8,61 @@
 
 #import "CSTabBar.h"
 
+#include "CSBarButton.h"
+
 @interface CSTabBar()
 
 @property (nonatomic,weak) UIButton *pushBtn;
 
+@property (nonatomic,weak) UIButton *selectedButton;
+@property (nonatomic,strong) NSMutableArray *buttons;
+
 @end
 @implementation CSTabBar
+
+-(NSMutableArray *)buttons{
+    if (_buttons == nil) {
+        _buttons = [NSMutableArray array];
+    }
+    return _buttons;
+}
+
+
+-(void)setItems:(NSArray *)items{
+    _items = items;
+    
+    for (UITabBarItem *baritem in items ) {
+        CSBarButton *btn = [CSBarButton buttonWithType:UIButtonTypeCustom];
+        btn.item = baritem;
+        
+        btn.tag = self.buttons.count;
+        
+        [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchDown];
+        
+        if (btn.tag == 0) {
+            [self btnClick:btn];
+        }
+        
+        [self addSubview:btn];
+        [self.buttons addObject:btn];
+    }
+    
+}
+
+// 点击tabBarButton调用
+-(void)btnClick:(UIButton *)button
+{
+    _selectedButton.selected = NO;
+    button.selected = YES;
+    _selectedButton = button;
+    
+    // 通知tabBarVc切换控制器，
+    
+    if ([_delegate respondsToSelector:@selector(tabBar:didClickButton:)]) {
+        [_delegate tabBar:self didClickButton:button.tag];
+    }
+}
+
 
 -(UIButton *)pushBtn{
     if (_pushBtn == nil) {

@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CSTabBar : UITabBar
+@class CSTabBar;
+
+@protocol CSTabBarDelegate <NSObject>
+@optional
+- (void)tabBar:(CSTabBar *)tabBar didClickButton:(NSInteger)index;
+
+@end
+
+
+@interface CSTabBar : UIView
+
+
+@property(nonatomic,strong) NSArray *items;
+
+@property(nonatomic,weak) id<CSTabBarDelegate> delegate;
 
 @end
