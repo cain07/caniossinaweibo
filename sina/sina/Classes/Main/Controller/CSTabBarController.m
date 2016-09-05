@@ -76,11 +76,18 @@
 
 -(void)SetCSTabbarItemWithName:(UIViewController *)vc title: (NSString *)title barImage:(UIImage *)barImage selImage:(UIImage *)selImage{
     
+    vc.title = title;
+    
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = barImage;
     
     vc.tabBarItem.badgeValue = @"29";
     vc.tabBarItem.selectedImage = selImage;
+    
+    
+//    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+//    
+//    [self addChildViewController:nvc];
 }
 
 
