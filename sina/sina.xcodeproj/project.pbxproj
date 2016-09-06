@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		040A48A11D7872F80055F5DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040A48A01D7872F80055F5DB /* Assets.xcassets */; };
 		040A48A71D7DA65E0055F5DB /* CSBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A48A61D7DA65E0055F5DB /* CSBarButton.m */; };
+		A4AA22261D7ED686009DDA34 /* CSTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA22251D7ED686009DDA34 /* CSTitleButton.m */; };
 		A4EE6B3D1D7E793000989515 /* CSProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B3C1D7E793000989515 /* CSProfileViewController.m */; };
 		A4EE6B401D7E955D00989515 /* CSMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B3F1D7E955D00989515 /* CSMessageViewController.m */; };
 		A4EE6B431D7E97EA00989515 /* CSDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B421D7E97EA00989515 /* CSDiscoverViewController.m */; };
@@ -28,6 +29,8 @@
 		040A48A01D7872F80055F5DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040A48A51D7DA65E0055F5DB /* CSBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSBarButton.h; sourceTree = "<group>"; };
 		040A48A61D7DA65E0055F5DB /* CSBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSBarButton.m; sourceTree = "<group>"; };
+		A4AA22241D7ED686009DDA34 /* CSTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTitleButton.h; sourceTree = "<group>"; };
+		A4AA22251D7ED686009DDA34 /* CSTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTitleButton.m; sourceTree = "<group>"; };
 		A4EE6B3B1D7E793000989515 /* CSProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSProfileViewController.h; sourceTree = "<group>"; };
 		A4EE6B3C1D7E793000989515 /* CSProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSProfileViewController.m; sourceTree = "<group>"; };
 		A4EE6B3E1D7E955D00989515 /* CSMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMessageViewController.h; sourceTree = "<group>"; };
@@ -179,6 +182,8 @@
 		A4F5ECF61D79905F00BAA822 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A4AA22241D7ED686009DDA34 /* CSTitleButton.h */,
+				A4AA22251D7ED686009DDA34 /* CSTitleButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -387,6 +392,7 @@
 				A4F5ED0E1D79905F00BAA822 /* CSTabBarController.m in Sources */,
 				A4EE6B3D1D7E793000989515 /* CSProfileViewController.m in Sources */,
 				A4EE6B431D7E97EA00989515 /* CSDiscoverViewController.m in Sources */,
+				A4AA22261D7ED686009DDA34 /* CSTitleButton.m in Sources */,
 				A4EE6B461D7E989F00989515 /* CSSearchBar.m in Sources */,
 				A4F5ED111D79905F00BAA822 /* UIImage+Image.m in Sources */,
 				A4EE6B4C1D7EAB2100989515 /* CSHomeViewController.m in Sources */,
