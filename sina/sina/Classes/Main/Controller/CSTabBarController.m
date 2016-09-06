@@ -12,6 +12,7 @@
 #import "CSProfileViewController.h"
 #import "CSMessageViewController.h"
 #import "CSDiscoverViewController.h"
+#import "CSHomeViewController.h"
 
 @interface CSTabBarController ()<CSTabBarDelegate>
 
@@ -53,8 +54,8 @@
 
 -(void) setUpTabBarChildView{
     //首页
-    UIViewController *home = [[UIViewController alloc]init];
-    home.view.backgroundColor = [UIColor greenColor];
+    CSHomeViewController *home = [[CSHomeViewController alloc]init];
+    //home.view.backgroundColor = [UIColor greenColor];
  
     [self SetCSTabbarItemWithName:home title:@"首页" barImage:[UIImage imageNamed:@"tabbar_home"] selImage:[UIImage ImageWithOriganalName:@"tabbar_home_selected"]];
     

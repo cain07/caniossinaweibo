@@ -14,6 +14,8 @@
 		A4EE6B431D7E97EA00989515 /* CSDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B421D7E97EA00989515 /* CSDiscoverViewController.m */; };
 		A4EE6B461D7E989F00989515 /* CSSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B451D7E989F00989515 /* CSSearchBar.m */; };
 		A4EE6B491D7E9D6100989515 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B481D7E9D6100989515 /* UIView+Frame.m */; };
+		A4EE6B4C1D7EAB2100989515 /* CSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B4B1D7EAB2100989515 /* CSHomeViewController.m */; };
+		A4EE6B4F1D7EAC8400989515 /* UIBarButtonItem+item.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B4E1D7EAC8400989515 /* UIBarButtonItem+item.m */; };
 		A4F5ECEA1D7834CB00BAA822 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4F5ECE91D7834CB00BAA822 /* LaunchScreen.xib */; };
 		A4F5ED0E1D79905F00BAA822 /* CSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F5ECFA1D79905F00BAA822 /* CSTabBarController.m */; };
 		A4F5ED0F1D79905F00BAA822 /* CSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F5ECFE1D79905F00BAA822 /* CSTabBar.m */; };
@@ -36,6 +38,10 @@
 		A4EE6B451D7E989F00989515 /* CSSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSearchBar.m; sourceTree = "<group>"; };
 		A4EE6B471D7E9D6100989515 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		A4EE6B481D7E9D6100989515 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		A4EE6B4A1D7EAB2100989515 /* CSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSHomeViewController.h; sourceTree = "<group>"; };
+		A4EE6B4B1D7EAB2100989515 /* CSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSHomeViewController.m; sourceTree = "<group>"; };
+		A4EE6B4D1D7EAC8400989515 /* UIBarButtonItem+item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+item.h"; sourceTree = "<group>"; };
+		A4EE6B4E1D7EAC8400989515 /* UIBarButtonItem+item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+item.m"; sourceTree = "<group>"; };
 		A4F5ECCD1D77E0AE00BAA822 /* sina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F5ECE11D77E0AF00BAA822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4F5ECE91D7834CB00BAA822 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -157,6 +163,8 @@
 		A4F5ECF41D79905F00BAA822 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A4EE6B4A1D7EAB2100989515 /* CSHomeViewController.h */,
+				A4EE6B4B1D7EAB2100989515 /* CSHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -263,6 +271,8 @@
 				A4EE6B481D7E9D6100989515 /* UIView+Frame.m */,
 				A4F5ED071D79905F00BAA822 /* UIImage+Image.h */,
 				A4F5ED081D79905F00BAA822 /* UIImage+Image.m */,
+				A4EE6B4D1D7EAC8400989515 /* UIBarButtonItem+item.h */,
+				A4EE6B4E1D7EAC8400989515 /* UIBarButtonItem+item.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -371,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4EE6B4F1D7EAC8400989515 /* UIBarButtonItem+item.m in Sources */,
 				A4F5ED121D79905F00BAA822 /* main.m in Sources */,
 				040A48A71D7DA65E0055F5DB /* CSBarButton.m in Sources */,
 				A4F5ED0E1D79905F00BAA822 /* CSTabBarController.m in Sources */,
@@ -378,6 +389,7 @@
 				A4EE6B431D7E97EA00989515 /* CSDiscoverViewController.m in Sources */,
 				A4EE6B461D7E989F00989515 /* CSSearchBar.m in Sources */,
 				A4F5ED111D79905F00BAA822 /* UIImage+Image.m in Sources */,
+				A4EE6B4C1D7EAB2100989515 /* CSHomeViewController.m in Sources */,
 				A4F5ED0F1D79905F00BAA822 /* CSTabBar.m in Sources */,
 				A4EE6B401D7E955D00989515 /* CSMessageViewController.m in Sources */,
 				A4F5ED101D79905F00BAA822 /* AppDelegate.m in Sources */,

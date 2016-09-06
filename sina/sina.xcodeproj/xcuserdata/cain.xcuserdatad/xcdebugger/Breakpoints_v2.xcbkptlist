@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sina/Classes/Main/Controller/CSTabBarController.m"
-            timestampString = "494835464.406865"
+            timestampString = "494850231.008858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "-SetCSTabbarItemWithName:title:barImage:selImage:"
             landmarkType = "5">
          </BreakpointContent>
