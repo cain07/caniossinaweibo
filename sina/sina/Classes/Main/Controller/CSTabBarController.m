@@ -9,39 +9,46 @@
 #import "CSTabBarController.h"
 #import "UIImage+Image.h"
 #import "CSTabBar.h"
+#import "CSProfileViewController.h"
+#import "CSMessageViewController.h"
+#import "CSDiscoverViewController.h"
 
-@interface CSTabBarController ()
+@interface CSTabBarController ()<CSTabBarDelegate>
+
+@property (nonatomic, strong) NSMutableArray *items;
 
 @end
 
 @implementation CSTabBarController
 
-+(void)load{
-    //NSLog(@"%s",__func__);
-}
-
-+(void)initialize{
-    //NSLog(@"%s",__func__);
-    
-    UITabBarItem *item = [UITabBarItem appearance];
-    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    dic[NSForegroundColorAttributeName] = [UIColor orangeColor];
-    //[dic setObject:[UIColor orangeColor] forKey:NSForegroundColorAttributeName];
-    [item setTitleTextAttributes:dic forState:UIControlStateSelected];
-
+-(NSMutableArray *)items{
+    if (_items == nil) {
+        _items = [NSMutableArray array];
+    }
+    return _items;
 }
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    CSTabBar *csTabBar = [[CSTabBar alloc] initWithFrame:self.tabBar.frame];
-    
-    //NSLog(@"%@",self.tabBar);
-    [self setValue:csTabBar forKey:@"tabBar"];
-    //NSLog(@"%@",self.tabBar);
+
     
     [self setUpTabBarChildView];
+    
+    [self setupTabBar];
+}
+
+-(void)setupTabBar
+{
+    CSTabBar *tabbar = [[CSTabBar alloc] initWithFrame:self.tabBar.frame];
+    tabbar.backgroundColor = [UIColor whiteColor];
+    tabbar.delegate = self;
+    
+    tabbar.items = self.items;
+    [self.view addSubview:tabbar];
+    
+    [self.tabBar removeFromSuperview];
+    
 }
 
 -(void) setUpTabBarChildView{
@@ -51,26 +58,27 @@
  
     [self SetCSTabbarItemWithName:home title:@"首页" barImage:[UIImage imageNamed:@"tabbar_home"] selImage:[UIImage ImageWithOriganalName:@"tabbar_home_selected"]];
     
-    [self addChildViewController:home];
+    //[self addChildViewController:home];
     //消息
-    UIViewController *message = [[UIViewController alloc]init];
-    message.view.backgroundColor = [UIColor blueColor];
+    CSMessageViewController *message = [[CSMessageViewController alloc]init];
+    
    
     [self SetCSTabbarItemWithName:message title:@"消息" barImage:[UIImage imageNamed:@"tabbar_message_center"] selImage:[UIImage ImageWithOriganalName:@"tabbar_message_center_selected"]];
-    [self addChildViewController:message];
+    //[/self addChildViewController:message];
     
     //发现
-    UIViewController *discover = [[UIViewController alloc]init];
-    discover.view.backgroundColor = [UIColor orangeColor];
+    CSDiscoverViewController *discover = [[CSDiscoverViewController alloc]init];
 
     [self SetCSTabbarItemWithName:discover title:@"发现" barImage:[UIImage imageNamed:@"tabbar_discover"] selImage:[UIImage ImageWithOriganalName:@"tabbar_discover_selected"]];
-    [self addChildViewController:discover];
+   // [self addChildViewController:discover];
     //我的
-    UIViewController *profile = [[UIViewController alloc]init];
-    profile.view.backgroundColor = [UIColor yellowColor];
+//    UIViewController *profile = [[UIViewController alloc]init];
+//    profile.view.backgroundColor = [UIColor yellowColor];
+    
+    CSProfileViewController *profile = [[CSProfileViewController alloc]init];
     
     [self SetCSTabbarItemWithName:profile title:@"我的" barImage:[UIImage imageNamed:@"tabbar_profile"] selImage:[UIImage ImageWithOriganalName:@"tabbar_profile_selected"]];
-    [self addChildViewController:profile];
+    //[self addChildViewController:profile];
     
 }
 
@@ -84,10 +92,10 @@
     vc.tabBarItem.badgeValue = @"29";
     vc.tabBarItem.selectedImage = selImage;
     
+    [self.items addObject:vc.tabBarItem];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
     
-//    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
-//    
-//    [self addChildViewController:nvc];
+    [self addChildViewController:nvc];
 }
 
 #pragma mark - 当点击tabBar上的按钮调用

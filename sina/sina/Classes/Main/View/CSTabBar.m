@@ -31,7 +31,7 @@
 -(void)setItems:(NSArray *)items{
     _items = items;
     
-    for (UITabBarItem *baritem in items ) {
+    for (UITabBarItem *baritem in _items ) {
         CSBarButton *btn = [CSBarButton buttonWithType:UIButtonTypeCustom];
         btn.item = baritem;
         
@@ -74,13 +74,11 @@
         [btn setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button"] forState:UIControlStateNormal];
         [btn setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button_highlighted"] forState:UIControlStateHighlighted];
         
-        
         _pushBtn = btn;
         
         [_pushBtn sizeToFit];
         [self addSubview:_pushBtn];
     }
-    
     return _pushBtn;
 }
 
@@ -94,21 +92,15 @@
     CGFloat btnW = self.bounds.size.width/(self.items.count + 1);
     CGFloat btnH = self.bounds.size.height;
     int i = 0;
-    for (UIView *tabbarBtn in self.subviews) {
-        if ([tabbarBtn isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
-            
+    for (UIView *tabbarBtn in self.buttons) {
             if (i==2) {
                 i=3;
             }
             btnX = i * btnW;
             tabbarBtn.frame = CGRectMake(btnX, btnY, btnW, btnH);
             i++;
-            
-        }
     }
-    
     //按钮的位置
-    
     self.pushBtn.center = CGPointMake(self.bounds.size.width * 0.5, self.bounds.size.height *0.5);
 }
 

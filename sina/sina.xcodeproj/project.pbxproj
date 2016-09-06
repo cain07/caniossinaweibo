@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		040A48A11D7872F80055F5DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040A48A01D7872F80055F5DB /* Assets.xcassets */; };
 		040A48A71D7DA65E0055F5DB /* CSBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A48A61D7DA65E0055F5DB /* CSBarButton.m */; };
+		A4EE6B3D1D7E793000989515 /* CSProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B3C1D7E793000989515 /* CSProfileViewController.m */; };
+		A4EE6B401D7E955D00989515 /* CSMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B3F1D7E955D00989515 /* CSMessageViewController.m */; };
+		A4EE6B431D7E97EA00989515 /* CSDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B421D7E97EA00989515 /* CSDiscoverViewController.m */; };
+		A4EE6B461D7E989F00989515 /* CSSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B451D7E989F00989515 /* CSSearchBar.m */; };
+		A4EE6B491D7E9D6100989515 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B481D7E9D6100989515 /* UIView+Frame.m */; };
 		A4F5ECEA1D7834CB00BAA822 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4F5ECE91D7834CB00BAA822 /* LaunchScreen.xib */; };
 		A4F5ED0E1D79905F00BAA822 /* CSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F5ECFA1D79905F00BAA822 /* CSTabBarController.m */; };
 		A4F5ED0F1D79905F00BAA822 /* CSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F5ECFE1D79905F00BAA822 /* CSTabBar.m */; };
@@ -21,6 +26,16 @@
 		040A48A01D7872F80055F5DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040A48A51D7DA65E0055F5DB /* CSBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSBarButton.h; sourceTree = "<group>"; };
 		040A48A61D7DA65E0055F5DB /* CSBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSBarButton.m; sourceTree = "<group>"; };
+		A4EE6B3B1D7E793000989515 /* CSProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSProfileViewController.h; sourceTree = "<group>"; };
+		A4EE6B3C1D7E793000989515 /* CSProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSProfileViewController.m; sourceTree = "<group>"; };
+		A4EE6B3E1D7E955D00989515 /* CSMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMessageViewController.h; sourceTree = "<group>"; };
+		A4EE6B3F1D7E955D00989515 /* CSMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSMessageViewController.m; sourceTree = "<group>"; };
+		A4EE6B411D7E97EA00989515 /* CSDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDiscoverViewController.h; sourceTree = "<group>"; };
+		A4EE6B421D7E97EA00989515 /* CSDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDiscoverViewController.m; sourceTree = "<group>"; };
+		A4EE6B441D7E989F00989515 /* CSSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSearchBar.h; sourceTree = "<group>"; };
+		A4EE6B451D7E989F00989515 /* CSSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSearchBar.m; sourceTree = "<group>"; };
+		A4EE6B471D7E9D6100989515 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		A4EE6B481D7E9D6100989515 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		A4F5ECCD1D77E0AE00BAA822 /* sina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F5ECE11D77E0AF00BAA822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4F5ECE91D7834CB00BAA822 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -107,6 +122,8 @@
 		A4F5ECF01D79905F00BAA822 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A4EE6B411D7E97EA00989515 /* CSDiscoverViewController.h */,
+				A4EE6B421D7E97EA00989515 /* CSDiscoverViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -121,6 +138,8 @@
 		A4F5ECF21D79905F00BAA822 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A4EE6B441D7E989F00989515 /* CSSearchBar.h */,
+				A4EE6B451D7E989F00989515 /* CSSearchBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,6 +225,8 @@
 		A4F5ED001D79905F00BAA822 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A4EE6B3E1D7E955D00989515 /* CSMessageViewController.h */,
+				A4EE6B3F1D7E955D00989515 /* CSMessageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -238,6 +259,8 @@
 		A4F5ED061D79905F00BAA822 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				A4EE6B471D7E9D6100989515 /* UIView+Frame.h */,
+				A4EE6B481D7E9D6100989515 /* UIView+Frame.m */,
 				A4F5ED071D79905F00BAA822 /* UIImage+Image.h */,
 				A4F5ED081D79905F00BAA822 /* UIImage+Image.m */,
 			);
@@ -257,6 +280,8 @@
 		A4F5ED0B1D79905F00BAA822 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A4EE6B3B1D7E793000989515 /* CSProfileViewController.h */,
+				A4EE6B3C1D7E793000989515 /* CSProfileViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -349,9 +374,14 @@
 				A4F5ED121D79905F00BAA822 /* main.m in Sources */,
 				040A48A71D7DA65E0055F5DB /* CSBarButton.m in Sources */,
 				A4F5ED0E1D79905F00BAA822 /* CSTabBarController.m in Sources */,
+				A4EE6B3D1D7E793000989515 /* CSProfileViewController.m in Sources */,
+				A4EE6B431D7E97EA00989515 /* CSDiscoverViewController.m in Sources */,
+				A4EE6B461D7E989F00989515 /* CSSearchBar.m in Sources */,
 				A4F5ED111D79905F00BAA822 /* UIImage+Image.m in Sources */,
 				A4F5ED0F1D79905F00BAA822 /* CSTabBar.m in Sources */,
+				A4EE6B401D7E955D00989515 /* CSMessageViewController.m in Sources */,
 				A4F5ED101D79905F00BAA822 /* AppDelegate.m in Sources */,
+				A4EE6B491D7E9D6100989515 /* UIView+Frame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
