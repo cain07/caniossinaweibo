@@ -8,8 +8,11 @@
 
 #import "CSHomeViewController.h"
 #import "UIBarButtonItem+item.h"
+
+#import "CSTitleButton.h"
 @interface CSHomeViewController ()
 
+@property (nonatomic,weak) CSTitleButton *titleButton;
 @end
 
 @implementation CSHomeViewController
@@ -26,6 +29,23 @@
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithImage:[UIImage imageNamed:@"navigationbar_friendsearch"] highImage:[UIImage imageNamed:@"navigationbar_friendsearch_highlighted"] target:self action:@selector(friendsearh) forControlEvents:UIControlEventTouchDragInside];
     
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonItemWithImage:[UIImage imageNamed:@"navigationbar_pop"] highImage:[UIImage imageNamed:@"navigationbar_pop_highlighted"] target:self action:@selector(pop) forControlEvents:UIControlEventTouchDragInside];
+    
+    // titleView
+    CSTitleButton *titleButton = [CSTitleButton buttonWithType:UIButtonTypeCustom];
+    _titleButton = titleButton;
+    
+    [titleButton setTitle:@"首页" forState:UIControlStateNormal];
+    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
+    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateSelected];
+
+    titleButton.adjustsImageWhenHighlighted = NO;
+    [titleButton addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.titleView = titleButton;
+}
+
+-(void)titleClick:(UIButton *)btn{
+    btn.selected = !btn.selected;
+    NSLog(@"titleClick");
 }
 
 -(void)pop{
