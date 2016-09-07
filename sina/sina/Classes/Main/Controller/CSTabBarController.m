@@ -14,6 +14,8 @@
 #import "CSDiscoverViewController.h"
 #import "CSHomeViewController.h"
 
+#import "CSNavigationController.h"
+
 @interface CSTabBarController ()<CSTabBarDelegate>
 
 @property (nonatomic, strong) NSMutableArray *items;
@@ -94,7 +96,7 @@
     vc.tabBarItem.selectedImage = selImage;
     
     [self.items addObject:vc.tabBarItem];
-    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+    CSNavigationController *nvc = [[CSNavigationController alloc] initWithRootViewController:vc];
     
     [self addChildViewController:nvc];
 }

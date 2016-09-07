@@ -21,7 +21,7 @@
 }
 
 -(void) chat{
-    
+    CSLog(@"message");
 }
 
 - (void)didReceiveMemoryWarning {

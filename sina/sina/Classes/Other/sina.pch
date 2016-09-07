@@ -16,4 +16,16 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
+// ...表示宏定义的可变参数
+// __VA_ARGS__:表示函数里面的可变参数
+#ifdef DEBUG // 调试
+
+#define CSLog(...) NSLog(__VA_ARGS__)
+
+#else // 发布
+
+#define CZLog(...)
+
+#endif
+
 #endif /* sina_pch */

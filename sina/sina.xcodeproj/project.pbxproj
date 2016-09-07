@@ -10,6 +10,7 @@
 		040A48A11D7872F80055F5DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040A48A01D7872F80055F5DB /* Assets.xcassets */; };
 		040A48A71D7DA65E0055F5DB /* CSBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A48A61D7DA65E0055F5DB /* CSBarButton.m */; };
 		040A48AB1D7F0E070055F5DB /* CSCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A48AA1D7F0E070055F5DB /* CSCover.m */; };
+		040A48AE1D805C770055F5DB /* CSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A48AD1D805C770055F5DB /* CSNavigationController.m */; };
 		A4AA22261D7ED686009DDA34 /* CSTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA22251D7ED686009DDA34 /* CSTitleButton.m */; };
 		A4AA22291D7FC656009DDA34 /* CSPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA22281D7FC656009DDA34 /* CSPopMenu.m */; };
 		A4AA222C1D7FE43A009DDA34 /* CSOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA222B1D7FE43A009DDA34 /* CSOneViewController.m */; };
@@ -35,6 +36,8 @@
 		040A48A81D7EFA690055F5DB /* sina.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sina.pch; sourceTree = "<group>"; };
 		040A48A91D7F0E070055F5DB /* CSCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCover.h; sourceTree = "<group>"; };
 		040A48AA1D7F0E070055F5DB /* CSCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCover.m; sourceTree = "<group>"; };
+		040A48AC1D805C770055F5DB /* CSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNavigationController.h; sourceTree = "<group>"; };
+		040A48AD1D805C770055F5DB /* CSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSNavigationController.m; sourceTree = "<group>"; };
 		A4AA22241D7ED686009DDA34 /* CSTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTitleButton.h; sourceTree = "<group>"; };
 		A4AA22251D7ED686009DDA34 /* CSTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTitleButton.m; sourceTree = "<group>"; };
 		A4AA22271D7FC656009DDA34 /* CSPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPopMenu.h; sourceTree = "<group>"; };
@@ -219,6 +222,8 @@
 			children = (
 				A4F5ECF91D79905F00BAA822 /* CSTabBarController.h */,
 				A4F5ECFA1D79905F00BAA822 /* CSTabBarController.m */,
+				040A48AC1D805C770055F5DB /* CSNavigationController.h */,
+				040A48AD1D805C770055F5DB /* CSNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -410,6 +415,7 @@
 				A4F5ED0E1D79905F00BAA822 /* CSTabBarController.m in Sources */,
 				A4EE6B3D1D7E793000989515 /* CSProfileViewController.m in Sources */,
 				040A48AB1D7F0E070055F5DB /* CSCover.m in Sources */,
+				040A48AE1D805C770055F5DB /* CSNavigationController.m in Sources */,
 				A4EE6B431D7E97EA00989515 /* CSDiscoverViewController.m in Sources */,
 				A4AA22261D7ED686009DDA34 /* CSTitleButton.m in Sources */,
 				A4EE6B461D7E989F00989515 /* CSSearchBar.m in Sources */,
