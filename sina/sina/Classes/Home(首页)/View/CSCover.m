@@ -36,7 +36,7 @@
     CSCover *cover = [[CSCover alloc] initWithFrame:[UIScreen mainScreen].bounds];
     cover.backgroundColor = [UIColor clearColor];
     
-    [[UIApplication sharedApplication].keyWindow addSubview:cover];
+    [CSKeyWindow addSubview:cover];
     
     return cover;
 }

@@ -8,14 +8,29 @@
 
 #import "CSHomeViewController.h"
 #import "UIBarButtonItem+item.h"
+#import "CSOneViewController.h"
 
 #import "CSTitleButton.h"
-@interface CSHomeViewController ()
+#import "CSPopMenu.h"
+#import "CSCover.h"
+@interface CSHomeViewController ()<CSCoverDelegate>
 
 @property (nonatomic,weak) CSTitleButton *titleButton;
+
+@property (nonatomic, strong) CSOneViewController *one;
+
 @end
 
 @implementation CSHomeViewController
+
+
+-(CSOneViewController *)one{
+    if (_one == nil) {
+        _one = [[CSOneViewController alloc] init];
+    }
+    
+    return _one;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,6 +61,19 @@
 -(void)titleClick:(UIButton *)btn{
     btn.selected = !btn.selected;
     NSLog(@"titleClick");
+    
+    // 弹出蒙板
+    CSCover *cover = [CSCover show];
+    cover.delegate = self;
+    
+    
+    // 弹出pop菜单
+    CGFloat popW = 200;
+    CGFloat popX = (self.view.width - 200) * 0.5;
+    CGFloat popH = popW;
+    CGFloat popY = 55;
+    CSPopMenu *menu = [CSPopMenu showInRect:CGRectMake(popX, popY, popW, popH)];
+    menu.contentView = self.one.view;
 }
 
 -(void)pop{
@@ -54,6 +82,11 @@
 
 -(void)friendsearh{
     
+}
+
+-(void)coverDidClickCover:(CSCover *)cover{
+    [CSPopMenu hide];
+    _titleButton.selected = NO;
 }
 
 - (void)didReceiveMemoryWarning {

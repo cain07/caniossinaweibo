@@ -11,6 +11,8 @@
 		040A48A71D7DA65E0055F5DB /* CSBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A48A61D7DA65E0055F5DB /* CSBarButton.m */; };
 		040A48AB1D7F0E070055F5DB /* CSCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A48AA1D7F0E070055F5DB /* CSCover.m */; };
 		A4AA22261D7ED686009DDA34 /* CSTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA22251D7ED686009DDA34 /* CSTitleButton.m */; };
+		A4AA22291D7FC656009DDA34 /* CSPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA22281D7FC656009DDA34 /* CSPopMenu.m */; };
+		A4AA222C1D7FE43A009DDA34 /* CSOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA222B1D7FE43A009DDA34 /* CSOneViewController.m */; };
 		A4EE6B3D1D7E793000989515 /* CSProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B3C1D7E793000989515 /* CSProfileViewController.m */; };
 		A4EE6B401D7E955D00989515 /* CSMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B3F1D7E955D00989515 /* CSMessageViewController.m */; };
 		A4EE6B431D7E97EA00989515 /* CSDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B421D7E97EA00989515 /* CSDiscoverViewController.m */; };
@@ -35,6 +37,10 @@
 		040A48AA1D7F0E070055F5DB /* CSCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCover.m; sourceTree = "<group>"; };
 		A4AA22241D7ED686009DDA34 /* CSTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTitleButton.h; sourceTree = "<group>"; };
 		A4AA22251D7ED686009DDA34 /* CSTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTitleButton.m; sourceTree = "<group>"; };
+		A4AA22271D7FC656009DDA34 /* CSPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPopMenu.h; sourceTree = "<group>"; };
+		A4AA22281D7FC656009DDA34 /* CSPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPopMenu.m; sourceTree = "<group>"; };
+		A4AA222A1D7FE43A009DDA34 /* CSOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSOneViewController.h; sourceTree = "<group>"; };
+		A4AA222B1D7FE43A009DDA34 /* CSOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSOneViewController.m; sourceTree = "<group>"; };
 		A4EE6B3B1D7E793000989515 /* CSProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSProfileViewController.h; sourceTree = "<group>"; };
 		A4EE6B3C1D7E793000989515 /* CSProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSProfileViewController.m; sourceTree = "<group>"; };
 		A4EE6B3E1D7E955D00989515 /* CSMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMessageViewController.h; sourceTree = "<group>"; };
@@ -172,6 +178,8 @@
 			children = (
 				A4EE6B4A1D7EAB2100989515 /* CSHomeViewController.h */,
 				A4EE6B4B1D7EAB2100989515 /* CSHomeViewController.m */,
+				A4AA222A1D7FE43A009DDA34 /* CSOneViewController.h */,
+				A4AA222B1D7FE43A009DDA34 /* CSOneViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -190,6 +198,8 @@
 				A4AA22251D7ED686009DDA34 /* CSTitleButton.m */,
 				040A48A91D7F0E070055F5DB /* CSCover.h */,
 				040A48AA1D7F0E070055F5DB /* CSCover.m */,
+				A4AA22271D7FC656009DDA34 /* CSPopMenu.h */,
+				A4AA22281D7FC656009DDA34 /* CSPopMenu.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -393,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4AA22291D7FC656009DDA34 /* CSPopMenu.m in Sources */,
 				A4EE6B4F1D7EAC8400989515 /* UIBarButtonItem+item.m in Sources */,
 				A4F5ED121D79905F00BAA822 /* main.m in Sources */,
 				040A48A71D7DA65E0055F5DB /* CSBarButton.m in Sources */,
@@ -405,6 +416,7 @@
 				A4F5ED111D79905F00BAA822 /* UIImage+Image.m in Sources */,
 				A4EE6B4C1D7EAB2100989515 /* CSHomeViewController.m in Sources */,
 				A4F5ED0F1D79905F00BAA822 /* CSTabBar.m in Sources */,
+				A4AA222C1D7FE43A009DDA34 /* CSOneViewController.m in Sources */,
 				A4EE6B401D7E955D00989515 /* CSMessageViewController.m in Sources */,
 				A4F5ED101D79905F00BAA822 /* AppDelegate.m in Sources */,
 				A4EE6B491D7E9D6100989515 /* UIView+Frame.m in Sources */,
@@ -498,6 +510,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = sina/Classes/Other/sina.pch;
 				INFOPLIST_FILE = sina/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -510,6 +524,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = sina/Classes/Other/sina.pch;
 				INFOPLIST_FILE = sina/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
