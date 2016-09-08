@@ -13,6 +13,7 @@
 #import "CSTitleButton.h"
 #import "CSPopMenu.h"
 #import "CSCover.h"
+
 @interface CSHomeViewController ()<CSCoverDelegate>
 
 @property (nonatomic,weak) CSTitleButton *titleButton;
@@ -41,9 +42,9 @@
    }
 
 -(void) setUpBarView{
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithImage:[UIImage imageNamed:@"navigationbar_friendsearch"] highImage:[UIImage imageNamed:@"navigationbar_friendsearch_highlighted"] target:self action:@selector(friendsearh) forControlEvents:UIControlEventTouchDragInside];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithImage:[UIImage imageNamed:@"navigationbar_friendsearch"] highImage:[UIImage imageNamed:@"navigationbar_friendsearch_highlighted"] target:self action:@selector(friendsearh) forControlEvents:UIControlEventTouchUpInside];
     
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonItemWithImage:[UIImage imageNamed:@"navigationbar_pop"] highImage:[UIImage imageNamed:@"navigationbar_pop_highlighted"] target:self action:@selector(pop) forControlEvents:UIControlEventTouchDragInside];
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonItemWithImage:[UIImage imageNamed:@"navigationbar_pop"] highImage:[UIImage imageNamed:@"navigationbar_pop_highlighted"] target:self action:@selector(pop) forControlEvents:UIControlEventTouchUpInside];
     
     // titleView
     CSTitleButton *titleButton = [CSTitleButton buttonWithType:UIButtonTypeCustom];
@@ -77,11 +78,19 @@
 }
 
 -(void)pop{
+    //NSLog(@"titleClick");
     
+    CSOneViewController *one = [[CSOneViewController alloc] initWithNibName:nil bundle:nil];
+    one.hidesBottomBarWhenPushed = YES;
+    
+    
+    
+    [self.navigationController pushViewController:one animated:YES];
 }
 
 -(void)friendsearh{
-    
+   // NSLog(@"titleClick");
+    CSLog(@"message");
 }
 
 -(void)coverDidClickCover:(CSCover *)cover{

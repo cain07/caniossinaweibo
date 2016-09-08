@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CSOneViewController : UITableViewController
+@interface CSOneViewController : UIViewController
 
 @end

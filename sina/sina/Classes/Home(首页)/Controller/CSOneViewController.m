@@ -9,6 +9,8 @@
 #import "CSOneViewController.h"
 #import "CSTitleButton.h"
 #import "CSHomeViewController.h"
+#import "UIBarButtonItem+item.h"
+#import "CSTwoViewController.h"
 
 @interface CSOneViewController ()
 
@@ -20,9 +22,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    }
+}
+
+- (IBAction)btn2Two:(id)sender {
+    CSTwoViewController *two = [[CSTwoViewController alloc] init];
+    
+    [self.navigationController pushViewController:two animated:YES];
+}
+
+
+-(void)backtoPre{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)bockToRoot{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -31,33 +48,33 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//#warning Incomplete implementation, return the number of sections
+//    return 0;
+//}
+//
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//#warning Incomplete implementation, return the number of rows
+//    return 3;
+//}
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 3;
-}
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    static NSString *ID = @"cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-        cell.backgroundColor = [UIColor clearColor];
-    }
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
-    // Configure the cell...
-    
-    return cell;
-}
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//
+//    static NSString *ID = @"cell";
+//    
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+//    
+//    if (cell == nil) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+//        cell.backgroundColor = [UIColor redColor];
+//    }
+//    
+//    cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+//    // Configure the cell...
+//    
+//    return cell;
+//}
 
 
 /*

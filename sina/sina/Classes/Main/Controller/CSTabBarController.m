@@ -31,6 +31,14 @@
     return _items;
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    for (UIView *baritem in self.tabBar.subviews) {
+        if ([baritem isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+            [baritem removeFromSuperview];
+        }
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,12 +51,12 @@
 
 -(void)setupTabBar
 {
-    CSTabBar *tabbar = [[CSTabBar alloc] initWithFrame:self.tabBar.frame];
+    CSTabBar *tabbar = [[CSTabBar alloc] initWithFrame:self.tabBar.bounds];
     tabbar.backgroundColor = [UIColor whiteColor];
     tabbar.delegate = self;
     
     tabbar.items = self.items;
-    [self.view addSubview:tabbar];
+    [self.tabBar addSubview:tabbar];
     
     [self.tabBar removeFromSuperview];
     

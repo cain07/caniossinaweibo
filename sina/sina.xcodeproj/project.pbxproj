@@ -14,6 +14,9 @@
 		A4AA22261D7ED686009DDA34 /* CSTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA22251D7ED686009DDA34 /* CSTitleButton.m */; };
 		A4AA22291D7FC656009DDA34 /* CSPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA22281D7FC656009DDA34 /* CSPopMenu.m */; };
 		A4AA222C1D7FE43A009DDA34 /* CSOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA222B1D7FE43A009DDA34 /* CSOneViewController.m */; };
+		A4AA222E1D810464009DDA34 /* CSOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AA222D1D810464009DDA34 /* CSOneViewController.xib */; };
+		A4AA22321D816375009DDA34 /* CSTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA22301D816375009DDA34 /* CSTwoViewController.m */; };
+		A4AA22331D816375009DDA34 /* CSTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AA22311D816375009DDA34 /* CSTwoViewController.xib */; };
 		A4EE6B3D1D7E793000989515 /* CSProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B3C1D7E793000989515 /* CSProfileViewController.m */; };
 		A4EE6B401D7E955D00989515 /* CSMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B3F1D7E955D00989515 /* CSMessageViewController.m */; };
 		A4EE6B431D7E97EA00989515 /* CSDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B421D7E97EA00989515 /* CSDiscoverViewController.m */; };
@@ -44,6 +47,10 @@
 		A4AA22281D7FC656009DDA34 /* CSPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPopMenu.m; sourceTree = "<group>"; };
 		A4AA222A1D7FE43A009DDA34 /* CSOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSOneViewController.h; sourceTree = "<group>"; };
 		A4AA222B1D7FE43A009DDA34 /* CSOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSOneViewController.m; sourceTree = "<group>"; };
+		A4AA222D1D810464009DDA34 /* CSOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSOneViewController.xib; sourceTree = "<group>"; };
+		A4AA222F1D816375009DDA34 /* CSTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTwoViewController.h; sourceTree = "<group>"; };
+		A4AA22301D816375009DDA34 /* CSTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTwoViewController.m; sourceTree = "<group>"; };
+		A4AA22311D816375009DDA34 /* CSTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSTwoViewController.xib; sourceTree = "<group>"; };
 		A4EE6B3B1D7E793000989515 /* CSProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSProfileViewController.h; sourceTree = "<group>"; };
 		A4EE6B3C1D7E793000989515 /* CSProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSProfileViewController.m; sourceTree = "<group>"; };
 		A4EE6B3E1D7E955D00989515 /* CSMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMessageViewController.h; sourceTree = "<group>"; };
@@ -183,6 +190,10 @@
 				A4EE6B4B1D7EAB2100989515 /* CSHomeViewController.m */,
 				A4AA222A1D7FE43A009DDA34 /* CSOneViewController.h */,
 				A4AA222B1D7FE43A009DDA34 /* CSOneViewController.m */,
+				A4AA222D1D810464009DDA34 /* CSOneViewController.xib */,
+				A4AA222F1D816375009DDA34 /* CSTwoViewController.h */,
+				A4AA22301D816375009DDA34 /* CSTwoViewController.m */,
+				A4AA22311D816375009DDA34 /* CSTwoViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -396,8 +407,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4AA222E1D810464009DDA34 /* CSOneViewController.xib in Resources */,
 				040A48A11D7872F80055F5DB /* Assets.xcassets in Resources */,
 				A4F5ECEA1D7834CB00BAA822 /* LaunchScreen.xib in Resources */,
+				A4AA22331D816375009DDA34 /* CSTwoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +435,7 @@
 				A4F5ED111D79905F00BAA822 /* UIImage+Image.m in Sources */,
 				A4EE6B4C1D7EAB2100989515 /* CSHomeViewController.m in Sources */,
 				A4F5ED0F1D79905F00BAA822 /* CSTabBar.m in Sources */,
+				A4AA22321D816375009DDA34 /* CSTwoViewController.m in Sources */,
 				A4AA222C1D7FE43A009DDA34 /* CSOneViewController.m in Sources */,
 				A4EE6B401D7E955D00989515 /* CSMessageViewController.m in Sources */,
 				A4F5ED101D79905F00BAA822 /* AppDelegate.m in Sources */,

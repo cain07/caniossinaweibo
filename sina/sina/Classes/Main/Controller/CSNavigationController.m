@@ -7,6 +7,7 @@
 //
 
 #import "CSNavigationController.h"
+#import "UIBarButtonItem+item.h"
 
 @interface CSNavigationController ()
 
@@ -33,14 +34,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    
+    [super pushViewController:viewController animated:animated];
+    if (self.viewControllers.count != 0) {
+        NSLog(@"1111");
+        
+        self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithImage:[UIImage imageNamed:@"navigationbar_back"] highImage:[UIImage imageNamed:@"navigationbar_back_highlighted"] target:self action:@selector(backtoPre) forControlEvents:UIControlEventTouchUpInside];
+        
+        self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonItemWithImage:[UIImage imageNamed:@"navigationbar_more"] highImage:[UIImage imageNamed:@"navigationbar_more_highlighted"] target:self action:@selector(bockToRoot) forControlEvents:UIControlEventTouchUpInside];
+        
+        
+    }
 }
-*/
+
+
+
 
 @end
