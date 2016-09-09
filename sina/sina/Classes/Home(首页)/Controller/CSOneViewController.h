@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CSOneViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *button;
+- (IBAction)btnAction:(id)sender;
 
 @end

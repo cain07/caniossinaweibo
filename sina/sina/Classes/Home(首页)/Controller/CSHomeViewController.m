@@ -13,6 +13,7 @@
 #import "CSTitleButton.h"
 #import "CSPopMenu.h"
 #import "CSCover.h"
+#import "CSThirdViewController.h"
 
 @interface CSHomeViewController ()<CSCoverDelegate>
 
@@ -84,8 +85,10 @@
     one.hidesBottomBarWhenPushed = YES;
     
     
-    
     [self.navigationController pushViewController:one animated:YES];
+    
+//    CSThirdViewController * vc = [[CSThirdViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(void)friendsearh{

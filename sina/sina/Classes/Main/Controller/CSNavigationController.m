@@ -49,7 +49,13 @@
     }
 }
 
+-(void)backtoPre{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
+-(void)bockToRoot{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 
 @end
