@@ -11,10 +11,10 @@
 		040A48A71D7DA65E0055F5DB /* CSBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A48A61D7DA65E0055F5DB /* CSBarButton.m */; };
 		040A48AB1D7F0E070055F5DB /* CSCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A48AA1D7F0E070055F5DB /* CSCover.m */; };
 		040A48AE1D805C770055F5DB /* CSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A48AD1D805C770055F5DB /* CSNavigationController.m */; };
+		A405F8681D82C8E9004E4CBC /* CSOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A405F8661D82C8E9004E4CBC /* CSOneViewController.m */; };
+		A405F8691D82C8E9004E4CBC /* CSOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A405F8671D82C8E9004E4CBC /* CSOneViewController.xib */; };
 		A4AA22261D7ED686009DDA34 /* CSTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA22251D7ED686009DDA34 /* CSTitleButton.m */; };
 		A4AA22291D7FC656009DDA34 /* CSPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA22281D7FC656009DDA34 /* CSPopMenu.m */; };
-		A4AA222C1D7FE43A009DDA34 /* CSOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA222B1D7FE43A009DDA34 /* CSOneViewController.m */; };
-		A4AA222E1D810464009DDA34 /* CSOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AA222D1D810464009DDA34 /* CSOneViewController.xib */; };
 		A4AA22321D816375009DDA34 /* CSTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA22301D816375009DDA34 /* CSTwoViewController.m */; };
 		A4AA22331D816375009DDA34 /* CSTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AA22311D816375009DDA34 /* CSTwoViewController.xib */; };
 		A4AA22371D8267D7009DDA34 /* CSThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA22351D8267D7009DDA34 /* CSThirdViewController.m */; };
@@ -43,13 +43,13 @@
 		040A48AA1D7F0E070055F5DB /* CSCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCover.m; sourceTree = "<group>"; };
 		040A48AC1D805C770055F5DB /* CSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNavigationController.h; sourceTree = "<group>"; };
 		040A48AD1D805C770055F5DB /* CSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSNavigationController.m; sourceTree = "<group>"; };
+		A405F8651D82C8E9004E4CBC /* CSOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSOneViewController.h; sourceTree = "<group>"; };
+		A405F8661D82C8E9004E4CBC /* CSOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSOneViewController.m; sourceTree = "<group>"; };
+		A405F8671D82C8E9004E4CBC /* CSOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSOneViewController.xib; sourceTree = "<group>"; };
 		A4AA22241D7ED686009DDA34 /* CSTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTitleButton.h; sourceTree = "<group>"; };
 		A4AA22251D7ED686009DDA34 /* CSTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTitleButton.m; sourceTree = "<group>"; };
 		A4AA22271D7FC656009DDA34 /* CSPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPopMenu.h; sourceTree = "<group>"; };
 		A4AA22281D7FC656009DDA34 /* CSPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPopMenu.m; sourceTree = "<group>"; };
-		A4AA222A1D7FE43A009DDA34 /* CSOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSOneViewController.h; sourceTree = "<group>"; };
-		A4AA222B1D7FE43A009DDA34 /* CSOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSOneViewController.m; sourceTree = "<group>"; };
-		A4AA222D1D810464009DDA34 /* CSOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSOneViewController.xib; sourceTree = "<group>"; };
 		A4AA222F1D816375009DDA34 /* CSTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTwoViewController.h; sourceTree = "<group>"; };
 		A4AA22301D816375009DDA34 /* CSTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTwoViewController.m; sourceTree = "<group>"; };
 		A4AA22311D816375009DDA34 /* CSTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSTwoViewController.xib; sourceTree = "<group>"; };
@@ -193,15 +193,15 @@
 			children = (
 				A4EE6B4A1D7EAB2100989515 /* CSHomeViewController.h */,
 				A4EE6B4B1D7EAB2100989515 /* CSHomeViewController.m */,
-				A4AA222A1D7FE43A009DDA34 /* CSOneViewController.h */,
-				A4AA222B1D7FE43A009DDA34 /* CSOneViewController.m */,
-				A4AA222D1D810464009DDA34 /* CSOneViewController.xib */,
 				A4AA222F1D816375009DDA34 /* CSTwoViewController.h */,
 				A4AA22301D816375009DDA34 /* CSTwoViewController.m */,
 				A4AA22311D816375009DDA34 /* CSTwoViewController.xib */,
 				A4AA22341D8267D7009DDA34 /* CSThirdViewController.h */,
 				A4AA22351D8267D7009DDA34 /* CSThirdViewController.m */,
 				A4AA22361D8267D7009DDA34 /* CSThirdViewController.xib */,
+				A405F8651D82C8E9004E4CBC /* CSOneViewController.h */,
+				A405F8661D82C8E9004E4CBC /* CSOneViewController.m */,
+				A405F8671D82C8E9004E4CBC /* CSOneViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -415,11 +415,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4AA222E1D810464009DDA34 /* CSOneViewController.xib in Resources */,
 				040A48A11D7872F80055F5DB /* Assets.xcassets in Resources */,
 				A4AA22381D8267D7009DDA34 /* CSThirdViewController.xib in Resources */,
 				A4F5ECEA1D7834CB00BAA822 /* LaunchScreen.xib in Resources */,
 				A4AA22331D816375009DDA34 /* CSTwoViewController.xib in Resources */,
+				A405F8691D82C8E9004E4CBC /* CSOneViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,11 +445,11 @@
 				A4EE6B4C1D7EAB2100989515 /* CSHomeViewController.m in Sources */,
 				A4F5ED0F1D79905F00BAA822 /* CSTabBar.m in Sources */,
 				A4AA22321D816375009DDA34 /* CSTwoViewController.m in Sources */,
-				A4AA222C1D7FE43A009DDA34 /* CSOneViewController.m in Sources */,
 				A4EE6B401D7E955D00989515 /* CSMessageViewController.m in Sources */,
 				A4F5ED101D79905F00BAA822 /* AppDelegate.m in Sources */,
 				A4AA22371D8267D7009DDA34 /* CSThirdViewController.m in Sources */,
 				A4EE6B491D7E9D6100989515 /* UIView+Frame.m in Sources */,
+				A405F8681D82C8E9004E4CBC /* CSOneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

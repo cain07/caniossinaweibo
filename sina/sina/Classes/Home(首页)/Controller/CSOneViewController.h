@@ -2,14 +2,12 @@
 //  CSOneViewController.h
 //  sina
 //
-//  Created by cain on 16/9/7.
+//  Created by cain on 16/9/9.
 //  Copyright © 2016年 cain. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface CSOneViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIButton *button;
-- (IBAction)btnAction:(id)sender;
 
 @end
