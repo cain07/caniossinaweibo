@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "CSTabBarController.h"
 #import "CSNewFeatureController.h"
+#import "CSOAuthViewController.h"
+
+#define CSVersionKey @"version"
 
 @interface AppDelegate ()
 
@@ -25,17 +28,14 @@
     
     //self.window.backgroundColor = [UIColor yellowColor];
     
-    CSNewFeatureController *newF = [[CSNewFeatureController alloc]init];
+    // 选择根控制器
+    // 判断下有没有授权
+    // 进行授权
+    CSOAuthViewController *oauthVc = [[CSOAuthViewController alloc] init];
     
-    self.window.rootViewController = newF;
-    
-    //创建tabbar
-//    CSTabBarController *tbc = [[CSTabBarController alloc]init];
-    
-    //tbc.view.backgroundColor = [UIColor redColor];
-    
-//    self.window.rootViewController = tbc;
-    
+    // 设置窗口的根控制器
+    self.window.rootViewController = oauthVc;
+
     
     //NSLog(@"%@",application.windows);
     
@@ -46,6 +46,25 @@
     return YES;
 }
 
+-(void)chooseToViewConatroller{
+    //版本号
+    NSString *versionNo = [NSBundle mainBundle].infoDictionary[@"CFBundleVersion"];
+    
+    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:CSVersionKey];
+    
+    if ([versionNo isEqualToString:lastVersion]) {
+        //创建tabbar
+        CSTabBarController *tbc = [[CSTabBarController alloc]init];
+        //tbc.view.backgroundColor = [UIColor redColor];
+        self.window.rootViewController = tbc;
+    }else{
+        CSNewFeatureController *newF = [[CSNewFeatureController alloc]init];
+        
+        self.window.rootViewController = newF;
+        
+        [[NSUserDefaults standardUserDefaults] setObject:versionNo forKey:CSVersionKey];
+    }
+}
 
 
 @end
