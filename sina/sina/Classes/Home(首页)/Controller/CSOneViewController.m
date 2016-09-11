@@ -7,6 +7,7 @@
 //
 
 #import "CSOneViewController.h"
+#import "CSTwoViewController.h"
 
 @interface CSOneViewController ()
 
@@ -20,6 +21,10 @@
     self.view.backgroundColor = [UIColor grayColor];
     
     NSLog(@"%@",self.view.subviews);
+}
+- (IBAction)btn1click:(id)sender {
+    CSTwoViewController *two = [[CSTwoViewController alloc]init];
+    [self.navigationController pushViewController:two animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

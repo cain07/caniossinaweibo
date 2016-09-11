@@ -11,6 +11,8 @@
 		040A48A71D7DA65E0055F5DB /* CSBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A48A61D7DA65E0055F5DB /* CSBarButton.m */; };
 		040A48AB1D7F0E070055F5DB /* CSCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A48AA1D7F0E070055F5DB /* CSCover.m */; };
 		040A48AE1D805C770055F5DB /* CSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A48AD1D805C770055F5DB /* CSNavigationController.m */; };
+		040A48B51D8456DF0055F5DB /* CSNewFeatureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A48B41D8456DF0055F5DB /* CSNewFeatureController.m */; };
+		040A48B81D850CAA0055F5DB /* CSNewFeatureViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A48B71D850CAA0055F5DB /* CSNewFeatureViewCell.m */; };
 		A405F8681D82C8E9004E4CBC /* CSOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A405F8661D82C8E9004E4CBC /* CSOneViewController.m */; };
 		A405F8691D82C8E9004E4CBC /* CSOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A405F8671D82C8E9004E4CBC /* CSOneViewController.xib */; };
 		A4AA22261D7ED686009DDA34 /* CSTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA22251D7ED686009DDA34 /* CSTitleButton.m */; };
@@ -43,6 +45,10 @@
 		040A48AA1D7F0E070055F5DB /* CSCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCover.m; sourceTree = "<group>"; };
 		040A48AC1D805C770055F5DB /* CSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNavigationController.h; sourceTree = "<group>"; };
 		040A48AD1D805C770055F5DB /* CSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSNavigationController.m; sourceTree = "<group>"; };
+		040A48B31D8456DF0055F5DB /* CSNewFeatureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNewFeatureController.h; sourceTree = "<group>"; };
+		040A48B41D8456DF0055F5DB /* CSNewFeatureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSNewFeatureController.m; sourceTree = "<group>"; };
+		040A48B61D850CAA0055F5DB /* CSNewFeatureViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSNewFeatureViewCell.h; sourceTree = "<group>"; };
+		040A48B71D850CAA0055F5DB /* CSNewFeatureViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSNewFeatureViewCell.m; sourceTree = "<group>"; };
 		A405F8651D82C8E9004E4CBC /* CSOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSOneViewController.h; sourceTree = "<group>"; };
 		A405F8661D82C8E9004E4CBC /* CSOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSOneViewController.m; sourceTree = "<group>"; };
 		A405F8671D82C8E9004E4CBC /* CSOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSOneViewController.xib; sourceTree = "<group>"; };
@@ -95,6 +101,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040A48AF1D8456B40055F5DB /* NewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				040A48B01D8456B40055F5DB /* Controller */,
+				040A48B11D8456B40055F5DB /* Model */,
+				040A48B21D8456B40055F5DB /* View */,
+			);
+			path = NewFeature;
+			sourceTree = "<group>";
+		};
+		040A48B01D8456B40055F5DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				040A48B31D8456DF0055F5DB /* CSNewFeatureController.h */,
+				040A48B41D8456DF0055F5DB /* CSNewFeatureController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		040A48B11D8456B40055F5DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		040A48B21D8456B40055F5DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				040A48B61D850CAA0055F5DB /* CSNewFeatureViewCell.h */,
+				040A48B71D850CAA0055F5DB /* CSNewFeatureViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A4F5ECC41D77E0AE00BAA822 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +174,7 @@
 		A4F5ECEE1D79905F00BAA822 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				040A48AF1D8456B40055F5DB /* NewFeature */,
 				A4F5ECEF1D79905F00BAA822 /* Discover(发现) */,
 				A4F5ECF31D79905F00BAA822 /* Home(首页) */,
 				A4F5ECF71D79905F00BAA822 /* Main */,
@@ -437,12 +479,14 @@
 				A4F5ED0E1D79905F00BAA822 /* CSTabBarController.m in Sources */,
 				A4EE6B3D1D7E793000989515 /* CSProfileViewController.m in Sources */,
 				040A48AB1D7F0E070055F5DB /* CSCover.m in Sources */,
+				040A48B51D8456DF0055F5DB /* CSNewFeatureController.m in Sources */,
 				040A48AE1D805C770055F5DB /* CSNavigationController.m in Sources */,
 				A4EE6B431D7E97EA00989515 /* CSDiscoverViewController.m in Sources */,
 				A4AA22261D7ED686009DDA34 /* CSTitleButton.m in Sources */,
 				A4EE6B461D7E989F00989515 /* CSSearchBar.m in Sources */,
 				A4F5ED111D79905F00BAA822 /* UIImage+Image.m in Sources */,
 				A4EE6B4C1D7EAB2100989515 /* CSHomeViewController.m in Sources */,
+				040A48B81D850CAA0055F5DB /* CSNewFeatureViewCell.m in Sources */,
 				A4F5ED0F1D79905F00BAA822 /* CSTabBar.m in Sources */,
 				A4AA22321D816375009DDA34 /* CSTwoViewController.m in Sources */,
 				A4EE6B401D7E955D00989515 /* CSMessageViewController.m in Sources */,
