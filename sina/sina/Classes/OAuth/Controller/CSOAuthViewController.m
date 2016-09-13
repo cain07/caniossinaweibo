@@ -9,6 +9,9 @@
 #import "CSOAuthViewController.h"
 #import "MBProgressHUD+MJ.h"
 #import "AFNetworking.h"
+#import "CSAccount.h"
+#import "CSAccountTool.h"
+#import "CSRootTool.h"
 
 #define CSAuthorizeBaseUrl @"https://api.weibo.com/oauth2/authorize"
 #define CSClient_id     @"1951394302"
@@ -101,6 +104,11 @@
     // 发送请求
     [mgr POST:@"https://api.weibo.com/oauth2/access_token" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) { // 请求成功的时候调用
         NSLog(@"%@",responseObject);
+        
+        CSAccount *account = [CSAccount accountWithDict:responseObject];
+        [CSAccountTool saveAccount:account];
+        
+        [CSRootTool chooseRootViewController:CSKeyWindow];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) { // 请求失败的时候调用
         NSLog(@"%@",error);

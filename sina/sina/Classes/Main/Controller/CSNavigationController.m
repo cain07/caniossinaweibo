@@ -8,6 +8,7 @@
 
 #import "CSNavigationController.h"
 #import "UIBarButtonItem+item.h"
+#import "CSTabBar.h"
 
 @interface CSNavigationController ()<UINavigationControllerDelegate>
 
@@ -48,7 +49,7 @@
     UITabBarController *tbc = (UITabBarController *)win.rootViewController;
     
     for (UIView *baritem in tbc.tabBar.subviews) {
-        if ([baritem isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+        if ([baritem isKindOfClass:[CSTabBar class]]) {
             [baritem removeFromSuperview];
         }
     }

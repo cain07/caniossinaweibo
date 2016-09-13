@@ -28,6 +28,9 @@
 		040A490C1D85BFA80055F5DB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 040A49001D85BFA80055F5DB /* MBProgressHUD.m */; };
 		A405F8681D82C8E9004E4CBC /* CSOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A405F8661D82C8E9004E4CBC /* CSOneViewController.m */; };
 		A405F8691D82C8E9004E4CBC /* CSOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A405F8671D82C8E9004E4CBC /* CSOneViewController.xib */; };
+		A405F86F1D87FEF1004E4CBC /* CSAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A405F86E1D87FEF1004E4CBC /* CSAccountTool.m */; };
+		A405F8721D87FF05004E4CBC /* CSRootTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A405F8711D87FF05004E4CBC /* CSRootTool.m */; };
+		A405F8751D87FFD3004E4CBC /* CSAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = A405F8741D87FFD3004E4CBC /* CSAccount.m */; };
 		A4AA22261D7ED686009DDA34 /* CSTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA22251D7ED686009DDA34 /* CSTitleButton.m */; };
 		A4AA22291D7FC656009DDA34 /* CSPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA22281D7FC656009DDA34 /* CSPopMenu.m */; };
 		A4AA22321D816375009DDA34 /* CSTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA22301D816375009DDA34 /* CSTwoViewController.m */; };
@@ -91,6 +94,12 @@
 		A405F8651D82C8E9004E4CBC /* CSOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSOneViewController.h; sourceTree = "<group>"; };
 		A405F8661D82C8E9004E4CBC /* CSOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSOneViewController.m; sourceTree = "<group>"; };
 		A405F8671D82C8E9004E4CBC /* CSOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSOneViewController.xib; sourceTree = "<group>"; };
+		A405F86D1D87FEF1004E4CBC /* CSAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAccountTool.h; sourceTree = "<group>"; };
+		A405F86E1D87FEF1004E4CBC /* CSAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAccountTool.m; sourceTree = "<group>"; };
+		A405F8701D87FF05004E4CBC /* CSRootTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSRootTool.h; sourceTree = "<group>"; };
+		A405F8711D87FF05004E4CBC /* CSRootTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSRootTool.m; sourceTree = "<group>"; };
+		A405F8731D87FFD3004E4CBC /* CSAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSAccount.h; path = "sina/Classes/Tools(业务类)/Root/CSAccount.h"; sourceTree = SOURCE_ROOT; };
+		A405F8741D87FFD3004E4CBC /* CSAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSAccount.m; path = "sina/Classes/Tools(业务类)/Root/CSAccount.m"; sourceTree = SOURCE_ROOT; };
 		A4AA22241D7ED686009DDA34 /* CSTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTitleButton.h; sourceTree = "<group>"; };
 		A4AA22251D7ED686009DDA34 /* CSTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTitleButton.m; sourceTree = "<group>"; };
 		A4AA22271D7FC656009DDA34 /* CSPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPopMenu.h; sourceTree = "<group>"; };
@@ -197,6 +206,8 @@
 		040A48BB1D85B6150055F5DB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A405F8731D87FFD3004E4CBC /* CSAccount.h */,
+				A405F8741D87FFD3004E4CBC /* CSAccount.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,6 +266,33 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		A405F86A1D87FE98004E4CBC /* Tools(业务类) */ = {
+			isa = PBXGroup;
+			children = (
+				A405F86B1D87FEB5004E4CBC /* Account */,
+				A405F86C1D87FEB5004E4CBC /* Root */,
+			);
+			path = "Tools(业务类)";
+			sourceTree = "<group>";
+		};
+		A405F86B1D87FEB5004E4CBC /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				A405F86D1D87FEF1004E4CBC /* CSAccountTool.h */,
+				A405F86E1D87FEF1004E4CBC /* CSAccountTool.m */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		A405F86C1D87FEB5004E4CBC /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				A405F8701D87FF05004E4CBC /* CSRootTool.h */,
+				A405F8711D87FF05004E4CBC /* CSRootTool.m */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		A4F5ECC41D77E0AE00BAA822 = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +331,7 @@
 		A4F5ECEE1D79905F00BAA822 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A405F86A1D87FE98004E4CBC /* Tools(业务类) */,
 				040A48B91D85B6150055F5DB /* OAuth */,
 				040A48AF1D8456B40055F5DB /* NewFeature */,
 				A4F5ECEF1D79905F00BAA822 /* Discover(发现) */,
@@ -609,9 +648,12 @@
 				040A48AE1D805C770055F5DB /* CSNavigationController.m in Sources */,
 				A4EE6B431D7E97EA00989515 /* CSDiscoverViewController.m in Sources */,
 				A4AA22261D7ED686009DDA34 /* CSTitleButton.m in Sources */,
+				A405F8751D87FFD3004E4CBC /* CSAccount.m in Sources */,
 				A4EE6B461D7E989F00989515 /* CSSearchBar.m in Sources */,
+				A405F86F1D87FEF1004E4CBC /* CSAccountTool.m in Sources */,
 				040A49081D85BFA80055F5DB /* AFURLResponseSerialization.m in Sources */,
 				040A49021D85BFA80055F5DB /* AFHTTPRequestOperationManager.m in Sources */,
+				A405F8721D87FF05004E4CBC /* CSRootTool.m in Sources */,
 				040A49011D85BFA80055F5DB /* AFHTTPRequestOperation.m in Sources */,
 				A4F5ED111D79905F00BAA822 /* UIImage+Image.m in Sources */,
 				A4EE6B4C1D7EAB2100989515 /* CSHomeViewController.m in Sources */,

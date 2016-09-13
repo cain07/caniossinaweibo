@@ -31,19 +31,18 @@
     return _items;
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    for (UIView *baritem in self.tabBar.subviews) {
-        if ([baritem isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
-            [baritem removeFromSuperview];
-        }
-    }
-}
+//-(void)viewDidAppear:(BOOL)animated{
+//    [super viewDidAppear:animated];
+//    for (UIView *baritem in self.tabBar.subviews) {
+//        if ([baritem isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+//            [baritem removeFromSuperview];
+//        }
+//    }
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
+ 
     [self setUpTabBarChildView];
     
     [self setupTabBar];
@@ -58,18 +57,17 @@
     tabbar.items = self.items;
     [self.tabBar addSubview:tabbar];
     
-    [self.tabBar removeFromSuperview];
+    //[self.tabBar removeFromSuperview];
     
 }
 
 -(void) setUpTabBarChildView{
     //首页
     CSHomeViewController *home = [[CSHomeViewController alloc]init];
-    //home.view.backgroundColor = [UIColor greenColor];
  
     [self SetCSTabbarItemWithName:home title:@"首页" barImage:[UIImage imageNamed:@"tabbar_home"] selImage:[UIImage ImageWithOriganalName:@"tabbar_home_selected"]];
     
-    //[self addChildViewController:home];
+
     //消息
     CSMessageViewController *message = [[CSMessageViewController alloc]init];
     
@@ -115,19 +113,5 @@
     self.selectedIndex = index;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

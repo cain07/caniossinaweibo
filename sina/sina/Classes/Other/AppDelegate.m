@@ -10,6 +10,8 @@
 #import "CSTabBarController.h"
 #import "CSNewFeatureController.h"
 #import "CSOAuthViewController.h"
+#import "CSAccountTool.h"
+#import "CSRootTool.h"
 
 #define CSVersionKey @"version"
 
@@ -27,44 +29,23 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     //self.window.backgroundColor = [UIColor yellowColor];
-    
     // 选择根控制器
     // 判断下有没有授权
     // 进行授权
-    CSOAuthViewController *oauthVc = [[CSOAuthViewController alloc] init];
-    
-    // 设置窗口的根控制器
-    self.window.rootViewController = oauthVc;
 
-    
-    //NSLog(@"%@",application.windows);
+    if ([CSAccountTool account]) {
+        [CSRootTool chooseRootViewController:self.window];
+    }else{
+        CSOAuthViewController *oauthVc = [[CSOAuthViewController alloc] init];
+        // 设置窗口的根控制器
+        self.window.rootViewController = oauthVc;
+    }
     
     [self.window makeKeyAndVisible];
-    
-    //NSLog(@"%@",application.windows);
-    
+
     return YES;
 }
 
--(void)chooseToViewConatroller{
-    //版本号
-    NSString *versionNo = [NSBundle mainBundle].infoDictionary[@"CFBundleVersion"];
-    
-    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:CSVersionKey];
-    
-    if ([versionNo isEqualToString:lastVersion]) {
-        //创建tabbar
-        CSTabBarController *tbc = [[CSTabBarController alloc]init];
-        //tbc.view.backgroundColor = [UIColor redColor];
-        self.window.rootViewController = tbc;
-    }else{
-        CSNewFeatureController *newF = [[CSNewFeatureController alloc]init];
-        
-        self.window.rootViewController = newF;
-        
-        [[NSUserDefaults standardUserDefaults] setObject:versionNo forKey:CSVersionKey];
-    }
-}
 
 
 @end
