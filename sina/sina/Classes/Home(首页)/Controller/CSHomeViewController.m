@@ -14,12 +14,20 @@
 #import "CSPopMenu.h"
 #import "CSCover.h"
 #import "CSThirdViewController.h"
+#import "CSStatus.h"
+#import "MJRefresh.h"
+#import "MJExtension.h"
+#import "UIImageView+WebCache.h"
+#import "AFNetworking.h"
+#import "CSAccountTool.h"
 
 @interface CSHomeViewController ()<CSCoverDelegate>
 
 @property (nonatomic,weak) CSTitleButton *titleButton;
 
 @property (nonatomic, strong) CSOneViewController *one;
+
+@property (nonatomic, strong) NSMutableArray *statuses;
 
 @end
 
@@ -34,13 +42,79 @@
     return _one;
 }
 
+- (NSMutableArray *)statuses
+{
+    if (_statuses == nil) {
+        _statuses = [NSMutableArray array];
+    }
+    return _statuses;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
    
     [self setUpBarView];
     
+    [self.tableView addHeaderWithTarget:self action:@selector(loadNewStatus) ];
+    [self.tableView headerBeginRefreshing];
+    [self.tableView addFooterWithTarget:self action:@selector(loadMoreStatus)];
+    
    }
+
+-(void)loadMoreStatus{
+    AFHTTPRequestOperationManager *http = [AFHTTPRequestOperationManager manager];
+    NSString *geturl =  @"https://api.weibo.com/2/statuses/friends_timeline.json";
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = [CSAccountTool account].access_token;
+    
+    if (self.statuses.count) {
+        long long maxId = [[[self.statuses lastObject] idstr] longLongValue] - 1;
+        params[@"max_id"] = [NSString stringWithFormat:@"%lld",maxId];
+    }
+    
+    [http GET: geturl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        // 结束上拉刷新
+        [self.tableView footerEndRefreshing];
+        NSArray *dictArr = responseObject[@"statuses"];
+        NSArray *statuses = (NSMutableArray *)[CSStatus objectArrayWithKeyValuesArray:dictArr];
+        
+        // 把数组中的元素添加进去
+        [self.statuses addObjectsFromArray:statuses];
+        
+        [self.tableView reloadData];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //ss
+    }];
+}
+
+#pragma mark - 请求更多旧的微博
+-(void)loadNewStatus{
+    AFHTTPRequestOperationManager *http = [AFHTTPRequestOperationManager manager];
+    NSString *geturl =  @"https://api.weibo.com/2/statuses/friends_timeline.json";
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = [CSAccountTool account].access_token;
+    
+    if (self.statuses.count) {
+        params[@"since_id"] = [self.statuses[0] idstr];
+    }
+    
+    [http GET: geturl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //ss
+        [self.tableView headerEndRefreshing];
+        NSArray *dictArr = responseObject[@"statuses"];
+        NSArray *statuses = (NSMutableArray *)[CSStatus objectArrayWithKeyValuesArray:dictArr];
+        
+        NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, statuses.count)];
+        
+        [self.statuses insertObjects:statuses atIndexes:indexSet];
+
+        [self.tableView reloadData];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+       //ss
+    }];
+}
 
 -(void) setUpBarView{
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithImage:[UIImage imageNamed:@"navigationbar_friendsearch"] highImage:[UIImage imageNamed:@"navigationbar_friendsearch_highlighted"] target:self action:@selector(friendsearh) forControlEvents:UIControlEventTouchUpInside];
@@ -106,70 +180,38 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.statuses.count;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *ID = @"cell";
     
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+    }
+    
+    // 获取status模型
+    CSStatus *status = self.statuses[indexPath.row];
+    
+    // 用户昵称
+    cell.textLabel.text = status.user.name;
+    [cell.imageView sd_setImageWithURL:status.user.profile_image_url placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
+    cell.detailTextLabel.text = status.text;
+
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+
 
 @end
