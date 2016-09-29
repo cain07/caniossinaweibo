@@ -71,6 +71,8 @@
 		A4AA22331D816375009DDA34 /* CSTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AA22311D816375009DDA34 /* CSTwoViewController.xib */; };
 		A4AA22371D8267D7009DDA34 /* CSThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA22351D8267D7009DDA34 /* CSThirdViewController.m */; };
 		A4AA22381D8267D7009DDA34 /* CSThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AA22361D8267D7009DDA34 /* CSThirdViewController.xib */; };
+		A4D4D83E1D9D267300DEF9C1 /* silence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4D4D83C1D9D267300DEF9C1 /* silence.mp3 */; };
+		A4D4D83F1D9D267300DEF9C1 /* 爸比我要喝奶奶.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4D4D83D1D9D267300DEF9C1 /* 爸比我要喝奶奶.mp3 */; };
 		A4EE6B3D1D7E793000989515 /* CSProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B3C1D7E793000989515 /* CSProfileViewController.m */; };
 		A4EE6B401D7E955D00989515 /* CSMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B3F1D7E955D00989515 /* CSMessageViewController.m */; };
 		A4EE6B431D7E97EA00989515 /* CSDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EE6B421D7E97EA00989515 /* CSDiscoverViewController.m */; };
@@ -214,6 +216,8 @@
 		A4AA22341D8267D7009DDA34 /* CSThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSThirdViewController.h; sourceTree = "<group>"; };
 		A4AA22351D8267D7009DDA34 /* CSThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSThirdViewController.m; sourceTree = "<group>"; };
 		A4AA22361D8267D7009DDA34 /* CSThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSThirdViewController.xib; sourceTree = "<group>"; };
+		A4D4D83C1D9D267300DEF9C1 /* silence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silence.mp3; sourceTree = "<group>"; };
+		A4D4D83D1D9D267300DEF9C1 /* 爸比我要喝奶奶.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "爸比我要喝奶奶.mp3"; sourceTree = "<group>"; };
 		A4EE6B3B1D7E793000989515 /* CSProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSProfileViewController.h; sourceTree = "<group>"; };
 		A4EE6B3C1D7E793000989515 /* CSProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSProfileViewController.m; sourceTree = "<group>"; };
 		A4EE6B3E1D7E955D00989515 /* CSMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMessageViewController.h; sourceTree = "<group>"; };
@@ -487,6 +491,15 @@
 			path = "../../../../../../../../Desktop/微博/0307-微博3/代码/04-请求微博数据/传智微博/Classes/Other/Lib/MJExtension";
 			sourceTree = "<group>";
 		};
+		A4D4D83B1D9D267300DEF9C1 /* Mp3 */ = {
+			isa = PBXGroup;
+			children = (
+				A4D4D83C1D9D267300DEF9C1 /* silence.mp3 */,
+				A4D4D83D1D9D267300DEF9C1 /* 爸比我要喝奶奶.mp3 */,
+			);
+			path = Mp3;
+			sourceTree = "<group>";
+		};
 		A4F5ECC41D77E0AE00BAA822 = {
 			isa = PBXGroup;
 			children = (
@@ -518,6 +531,7 @@
 		A4F5ECD01D77E0AE00BAA822 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A4D4D83B1D9D267300DEF9C1 /* Mp3 */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -791,6 +805,11 @@
 					A4F5ECCC1D77E0AE00BAA822 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 383U3JP56H;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -818,9 +837,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				040A48A11D7872F80055F5DB /* Assets.xcassets in Resources */,
+				A4D4D83F1D9D267300DEF9C1 /* 爸比我要喝奶奶.mp3 in Resources */,
 				A4AA22381D8267D7009DDA34 /* CSThirdViewController.xib in Resources */,
 				A472BB101D88F815005F4417 /* MJRefresh.bundle in Resources */,
 				A4F5ECEA1D7834CB00BAA822 /* LaunchScreen.xib in Resources */,
+				A4D4D83E1D9D267300DEF9C1 /* silence.mp3 in Resources */,
 				A4AA22331D816375009DDA34 /* CSTwoViewController.xib in Resources */,
 				A405F8691D82C8E9004E4CBC /* CSOneViewController.xib in Resources */,
 				040A490B1D85BFA80055F5DB /* MBProgressHUD.bundle in Resources */,

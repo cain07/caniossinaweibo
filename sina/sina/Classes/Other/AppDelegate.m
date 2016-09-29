@@ -12,10 +12,13 @@
 #import "CSOAuthViewController.h"
 #import "CSAccountTool.h"
 #import "CSRootTool.h"
+#import <AVFoundation/AVFoundation.h>
 
 #define CSVersionKey @"version"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) AVAudioPlayer *player;
 
 @end
 
@@ -44,6 +47,34 @@
     [self.window makeKeyAndVisible];
 
     return YES;
+}
+
+// 失去焦点
+-(void)applicationWillResignActive:(UIApplication *)application{
+    NSURL *url = [[NSBundle mainBundle]URLForResource:@"" withExtension:nil];
+    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    
+    [player prepareToPlay];
+    
+    player.numberOfLoops = -1;
+    
+    [player play];
+    
+    _player = player;
+}
+
+-(void)applicationDidEnterBackground:(UIApplication *)application{
+   // 当后台任务结束的时候调用
+    UIBackgroundTaskIdentifier utid = [application beginBackgroundTaskWithExpirationHandler:^{
+        [application endBackgroundTask:utid];
+    }];
+    
+    // 如何提高后台任务的优先级，欺骗苹果，我们是后台播放程序
+    
+    // 但是苹果会检测你的程序当时有没有播放音乐，如果没有，有可能就干掉你
+    
+    // 微博：在程序即将失去焦点的时候播放静音音乐.
+
 }
 
 
