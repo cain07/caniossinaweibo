@@ -21,6 +21,8 @@
 #import "AFNetworking.h"
 #import "CSAccountTool.h"
 
+#import "CSHttpTools.h"
+
 @interface CSHomeViewController ()<CSCoverDelegate>
 
 @property (nonatomic,weak) CSTitleButton *titleButton;
@@ -72,7 +74,8 @@
         params[@"max_id"] = [NSString stringWithFormat:@"%lld",maxId];
     }
     
-    [http GET: geturl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [CSHttpTools GET:geturl parameters:params success:^(id responseObject) {
+        
         // 结束上拉刷新
         [self.tableView footerEndRefreshing];
         NSArray *dictArr = responseObject[@"statuses"];
@@ -83,14 +86,15 @@
         
         [self.tableView reloadData];
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        //ss
+        
+    } failure:^(NSError *error) {
+        //
     }];
 }
 
 #pragma mark - 请求更多旧的微博
 -(void)loadNewStatus{
-    AFHTTPRequestOperationManager *http = [AFHTTPRequestOperationManager manager];
+    
     NSString *geturl =  @"https://api.weibo.com/2/statuses/friends_timeline.json";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"access_token"] = [CSAccountTool account].access_token;
@@ -98,9 +102,9 @@
     if (self.statuses.count) {
         params[@"since_id"] = [self.statuses[0] idstr];
     }
+
     
-    [http GET: geturl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        //ss
+    [CSHttpTools GET:geturl parameters:params success:^(id responseObject) {
         [self.tableView headerEndRefreshing];
         NSArray *dictArr = responseObject[@"statuses"];
         NSArray *statuses = (NSMutableArray *)[CSStatus objectArrayWithKeyValuesArray:dictArr];
@@ -108,12 +112,12 @@
         NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, statuses.count)];
         
         [self.statuses insertObjects:statuses atIndexes:indexSet];
-
-        [self.tableView reloadData];
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-       //ss
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+        //
     }];
+ 
 }
 
 -(void) setUpBarView{
@@ -205,10 +209,6 @@
     
     return cell;
 }
-
-
-
-
 
 
 
