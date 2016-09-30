@@ -23,6 +23,8 @@
 
 #import "CSHttpTools.h"
 
+#import "CSStatusTools.h"
+
 @interface CSHomeViewController ()<CSCoverDelegate>
 
 @property (nonatomic,weak) CSTitleButton *titleButton;
@@ -64,58 +66,49 @@
    }
 
 -(void)loadMoreStatus{
-    AFHTTPRequestOperationManager *http = [AFHTTPRequestOperationManager manager];
-    NSString *geturl =  @"https://api.weibo.com/2/statuses/friends_timeline.json";
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"access_token"] = [CSAccountTool account].access_token;
     
+    NSString *maxIdStr = nil;
     if (self.statuses.count) {
         long long maxId = [[[self.statuses lastObject] idstr] longLongValue] - 1;
-        params[@"max_id"] = [NSString stringWithFormat:@"%lld",maxId];
+        maxIdStr = [NSString stringWithFormat:@"%lld",maxId];
     }
     
-    [CSHttpTools GET:geturl parameters:params success:^(id responseObject) {
-        
+    [CSStatusTools moreStatusWithMaxId:maxIdStr success:^(NSArray *statuses) {
         // 结束上拉刷新
         [self.tableView footerEndRefreshing];
-        NSArray *dictArr = responseObject[@"statuses"];
-        NSArray *statuses = (NSMutableArray *)[CSStatus objectArrayWithKeyValuesArray:dictArr];
-        
         // 把数组中的元素添加进去
         [self.statuses addObjectsFromArray:statuses];
         
         [self.tableView reloadData];
-        
-        
+
     } failure:^(NSError *error) {
-        //
+        
     }];
+}
+
+#pragma mark - 刷新最新的微博
+- (void)refresh{
+    
+    // 自动下拉刷新
+    [self.tableView headerBeginRefreshing];
+    
 }
 
 #pragma mark - 请求更多旧的微博
 -(void)loadNewStatus{
     
-    NSString *geturl =  @"https://api.weibo.com/2/statuses/friends_timeline.json";
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"access_token"] = [CSAccountTool account].access_token;
-    
+    NSString *sinceId = nil;
     if (self.statuses.count) {
-        params[@"since_id"] = [self.statuses[0] idstr];
+        sinceId = [self.statuses[0] idstr];
     }
-
     
-    [CSHttpTools GET:geturl parameters:params success:^(id responseObject) {
-        [self.tableView headerEndRefreshing];
-        NSArray *dictArr = responseObject[@"statuses"];
-        NSArray *statuses = (NSMutableArray *)[CSStatus objectArrayWithKeyValuesArray:dictArr];
-        
+    [CSStatusTools newStatusWithSinceId:sinceId success:^(NSArray *statuses) {
         NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, statuses.count)];
-        
+        [self.tableView headerEndRefreshing];
         [self.statuses insertObjects:statuses atIndexes:indexSet];
-        
         [self.tableView reloadData];
     } failure:^(NSError *error) {
-        //
+        
     }];
  
 }

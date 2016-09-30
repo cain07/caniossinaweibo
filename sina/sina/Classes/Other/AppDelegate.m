@@ -28,6 +28,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    // 注册通知
+    UIUserNotificationSettings *setting = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge categories:nil];
+    [application registerUserNotificationSettings:setting];
+    
     //创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
@@ -51,7 +55,7 @@
 
 // 失去焦点
 -(void)applicationWillResignActive:(UIApplication *)application{
-    NSURL *url = [[NSBundle mainBundle]URLForResource:@"" withExtension:nil];
+    NSURL *url = [[NSBundle mainBundle]URLForResource:@"silence.mp3" withExtension:nil];
     AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
     
     [player prepareToPlay];
