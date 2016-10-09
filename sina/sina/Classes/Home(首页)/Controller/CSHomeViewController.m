@@ -24,6 +24,7 @@
 #import "CSHttpTools.h"
 
 #import "CSStatusTools.h"
+#import "CSUserTool.h"
 
 @interface CSHomeViewController ()<CSCoverDelegate>
 
@@ -62,6 +63,21 @@
     [self.tableView addHeaderWithTarget:self action:@selector(loadNewStatus) ];
     [self.tableView headerBeginRefreshing];
     [self.tableView addFooterWithTarget:self action:@selector(loadMoreStatus)];
+    
+    [CSUserTool userInfoWithSuccess:^(CSUser *user) {
+        [self.titleButton setTitle:user.name forState:UIControlStateNormal];
+        
+        // 获取当前的账号
+        CSAccount *account = [CSAccountTool account];
+        account.name = user.name;
+        
+        // 保存用户的名称
+        [CSAccountTool saveAccount:account];
+
+        
+    } failure:^(NSError *error) {
+        
+    }];
     
    }
 
@@ -122,7 +138,9 @@
     CSTitleButton *titleButton = [CSTitleButton buttonWithType:UIButtonTypeCustom];
     _titleButton = titleButton;
     
-    [titleButton setTitle:@"首页" forState:UIControlStateNormal];
+    NSString *title = [CSAccountTool account].name?:@"首页";
+    
+    [titleButton setTitle:title forState:UIControlStateNormal];
     [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
     [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateSelected];
 

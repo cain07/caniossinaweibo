@@ -32,6 +32,10 @@
  *  账号的有效期
  */
 @property (nonatomic, copy) NSString *remind_in;
+/**
+ *  用户的昵称
+ */
+@property (nonatomic, copy) NSString *name;
 
 
 

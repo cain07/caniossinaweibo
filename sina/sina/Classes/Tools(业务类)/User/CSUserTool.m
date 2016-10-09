@@ -35,4 +35,27 @@
     }];
 }
 
++(void)userInfoWithSuccess:(void (^)(CSUser *))success failure:(void (^)(NSError *))failure{
+    // 创建参数模型
+    CSUserParam *param = [CSUserParam param];
+    param.uid = [CSAccountTool account].uid;
+    
+    [CSHttpTools GET:@"https://api.weibo.com/2/users/show.json" parameters:param.keyValues success:^(id responseObject) {
+        
+        // 用户字典转换用户模型
+        CSUser *user = [CSUser objectWithKeyValues:responseObject];
+        
+        if (success) {
+            success(user);
+        }
+        
+    } failure:^(NSError *error) {
+        
+        if (failure) {
+            failure(error);
+        }
+        
+    }];
+}
+
 @end

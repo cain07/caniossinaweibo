@@ -134,7 +134,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sina/Classes/Main/Controller/CSTabBarController.m"
@@ -150,7 +150,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sina/Classes/Main/Controller/CSTabBarController.m"
@@ -166,7 +166,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sina/Classes/Main/Controller/CSTabBarController.m"
@@ -179,14 +179,14 @@
             landmarkType = "5">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[CSTabBarController getUnRead]"
                   moduleName = "sina"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cain/Documents/iosworkspace/iossinaweibo/sina/sina/Classes/Main/Controller/CSTabBarController.m"
-                  timestampString = "496921631.704402"
+                  timestampString = "497703493.130193"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "60"
@@ -194,14 +194,14 @@
                   offsetFromSymbolStart = "41">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__31-[CSTabBarController getUnRead]_block_invoke"
                   moduleName = "sina"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cain/Documents/iosworkspace/iossinaweibo/sina/sina/Classes/Main/Controller/CSTabBarController.m"
-                  timestampString = "496921631.704714"
+                  timestampString = "497703493.13035"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "60"
@@ -214,7 +214,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sina/Classes/Main/Controller/CSTabBarController.m"
@@ -227,14 +227,14 @@
             landmarkType = "5">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__31-[CSTabBarController getUnRead]_block_invoke"
                   moduleName = "sina"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cain/Documents/iosworkspace/iossinaweibo/sina/sina/Classes/Main/Controller/CSTabBarController.m"
-                  timestampString = "496921631.706341"
+                  timestampString = "497703493.131763"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "67"
@@ -242,14 +242,14 @@
                   offsetFromSymbolStart = "737">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__copy_helper_block_"
                   moduleName = "sina"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cain/Documents/iosworkspace/iossinaweibo/sina/sina/Classes/Main/Controller/CSTabBarController.m"
-                  timestampString = "496921631.706569"
+                  timestampString = "497703493.131998"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -257,14 +257,14 @@
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__destroy_helper_block_"
                   moduleName = "sina"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cain/Documents/iosworkspace/iossinaweibo/sina/sina/Classes/Main/Controller/CSTabBarController.m"
-                  timestampString = "496921631.706822"
+                  timestampString = "497703493.13218"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -272,14 +272,14 @@
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__31-[CSTabBarController getUnRead]_block_invoke34"
                   moduleName = "sina"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/cain/Documents/iosworkspace/iossinaweibo/sina/sina/Classes/Main/Controller/CSTabBarController.m"
-                  timestampString = "496921631.707066"
+                  timestampString = "497703493.132343"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "67"
@@ -287,6 +287,20 @@
                   offsetFromSymbolStart = "43">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sina/Classes/Tools(&#x4e1a;&#x52a1;&#x7c7b;)/User/CSUserTool.m"
+            timestampString = "497702932.082488"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "4"
+            endingLineNumber = "4">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
