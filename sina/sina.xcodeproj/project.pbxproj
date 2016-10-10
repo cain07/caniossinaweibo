@@ -31,6 +31,12 @@
 		A405F86F1D87FEF1004E4CBC /* CSAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A405F86E1D87FEF1004E4CBC /* CSAccountTool.m */; };
 		A405F8721D87FF05004E4CBC /* CSRootTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A405F8711D87FF05004E4CBC /* CSRootTool.m */; };
 		A405F8751D87FFD3004E4CBC /* CSAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = A405F8741D87FFD3004E4CBC /* CSAccount.m */; };
+		A40B51511DAB9F520072640A /* NSDate+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = A40B51501DAB9F520072640A /* NSDate+MJ.m */; };
+		A424C96D1DAB6D6D00D58361 /* CSStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A424C96C1DAB6D6D00D58361 /* CSStatusCell.m */; };
+		A424C9701DAB70FC00D58361 /* CSOriginalView.m in Sources */ = {isa = PBXBuildFile; fileRef = A424C96F1DAB70FC00D58361 /* CSOriginalView.m */; };
+		A424C9731DAB711400D58361 /* CSRetweetView.m in Sources */ = {isa = PBXBuildFile; fileRef = A424C9721DAB711400D58361 /* CSRetweetView.m */; };
+		A424C9761DAB712D00D58361 /* CSStatusToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A424C9751DAB712D00D58361 /* CSStatusToolBar.m */; };
+		A424C97A1DAB815400D58361 /* CSStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A424C9791DAB815400D58361 /* CSStatusFrame.m */; };
 		A472BAC91D88F628005F4417 /* CSStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = A472BAC81D88F628005F4417 /* CSStatus.m */; };
 		A472BACC1D88F6B5005F4417 /* CSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A472BACB1D88F6B5005F4417 /* CSUser.m */; };
 		A472BAEF1D88F804005F4417 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A472BACF1D88F804005F4417 /* MKAnnotationView+WebCache.m */; };
@@ -145,6 +151,18 @@
 		A405F8711D87FF05004E4CBC /* CSRootTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSRootTool.m; sourceTree = "<group>"; };
 		A405F8731D87FFD3004E4CBC /* CSAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSAccount.h; path = "sina/Classes/Tools(业务类)/Root/CSAccount.h"; sourceTree = SOURCE_ROOT; };
 		A405F8741D87FFD3004E4CBC /* CSAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSAccount.m; path = "sina/Classes/Tools(业务类)/Root/CSAccount.m"; sourceTree = SOURCE_ROOT; };
+		A40B514F1DAB9F520072640A /* NSDate+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MJ.h"; sourceTree = "<group>"; };
+		A40B51501DAB9F520072640A /* NSDate+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MJ.m"; sourceTree = "<group>"; };
+		A424C96B1DAB6D6D00D58361 /* CSStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSStatusCell.h; sourceTree = "<group>"; };
+		A424C96C1DAB6D6D00D58361 /* CSStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSStatusCell.m; sourceTree = "<group>"; };
+		A424C96E1DAB70FC00D58361 /* CSOriginalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSOriginalView.h; sourceTree = "<group>"; };
+		A424C96F1DAB70FC00D58361 /* CSOriginalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSOriginalView.m; sourceTree = "<group>"; };
+		A424C9711DAB711400D58361 /* CSRetweetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSRetweetView.h; sourceTree = "<group>"; };
+		A424C9721DAB711400D58361 /* CSRetweetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSRetweetView.m; sourceTree = "<group>"; };
+		A424C9741DAB712D00D58361 /* CSStatusToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSStatusToolBar.h; sourceTree = "<group>"; };
+		A424C9751DAB712D00D58361 /* CSStatusToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSStatusToolBar.m; sourceTree = "<group>"; };
+		A424C9781DAB815400D58361 /* CSStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSStatusFrame.h; sourceTree = "<group>"; };
+		A424C9791DAB815400D58361 /* CSStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSStatusFrame.m; sourceTree = "<group>"; };
 		A472BAC71D88F628005F4417 /* CSStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSStatus.h; sourceTree = "<group>"; };
 		A472BAC81D88F628005F4417 /* CSStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSStatus.m; sourceTree = "<group>"; };
 		A472BACA1D88F6B5005F4417 /* CSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUser.h; sourceTree = "<group>"; };
@@ -434,6 +452,30 @@
 				A405F8711D87FF05004E4CBC /* CSRootTool.m */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		A424C96A1DAB6D2300D58361 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A424C96B1DAB6D6D00D58361 /* CSStatusCell.h */,
+				A424C96C1DAB6D6D00D58361 /* CSStatusCell.m */,
+				A424C96E1DAB70FC00D58361 /* CSOriginalView.h */,
+				A424C96F1DAB70FC00D58361 /* CSOriginalView.m */,
+				A424C9711DAB711400D58361 /* CSRetweetView.h */,
+				A424C9721DAB711400D58361 /* CSRetweetView.m */,
+				A424C9741DAB712D00D58361 /* CSStatusToolBar.h */,
+				A424C9751DAB712D00D58361 /* CSStatusToolBar.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A424C9771DAB813600D58361 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A424C9781DAB815400D58361 /* CSStatusFrame.h */,
+				A424C9791DAB815400D58361 /* CSStatusFrame.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A472BACD1D88F804005F4417 /* SDWebImage */ = {
@@ -733,6 +775,7 @@
 		A4F5ECF51D79905F00BAA822 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A424C9771DAB813600D58361 /* ViewModel */,
 				A472BB2F1D88F8A4005F4417 /* CSPhoto.h */,
 				A472BB301D88F8A4005F4417 /* CSPhoto.m */,
 				A472BAC71D88F628005F4417 /* CSStatus.h */,
@@ -746,6 +789,7 @@
 		A4F5ECF61D79905F00BAA822 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A424C96A1DAB6D2300D58361 /* Cell */,
 				A4AA22241D7ED686009DDA34 /* CSTitleButton.h */,
 				A4AA22251D7ED686009DDA34 /* CSTitleButton.m */,
 				040A48A91D7F0E070055F5DB /* CSCover.h */,
@@ -844,6 +888,8 @@
 		A4F5ED061D79905F00BAA822 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				A40B514F1DAB9F520072640A /* NSDate+MJ.h */,
+				A40B51501DAB9F520072640A /* NSDate+MJ.m */,
 				A4EE6B471D7E9D6100989515 /* UIView+Frame.h */,
 				A4EE6B481D7E9D6100989515 /* UIView+Frame.m */,
 				A4F5ED071D79905F00BAA822 /* UIImage+Image.h */,
@@ -973,6 +1019,7 @@
 				A47C3F421D9E093100C91E1F /* MJRefreshFooterView.m in Sources */,
 				A47C3F3D1D9E093100C91E1F /* NSObject+MJIvar.m in Sources */,
 				A472BAF81D88F804005F4417 /* UIButton+WebCache.m in Sources */,
+				A424C96D1DAB6D6D00D58361 /* CSStatusCell.m in Sources */,
 				040A49051D85BFA80055F5DB /* AFSecurityPolicy.m in Sources */,
 				A4AA22291D7FC656009DDA34 /* CSPopMenu.m in Sources */,
 				A4EE6B4F1D7EAC8400989515 /* UIBarButtonItem+item.m in Sources */,
@@ -991,6 +1038,8 @@
 				A472BAF21D88F804005F4417 /* SDWebImageCompat.m in Sources */,
 				A47C3F3B1D9E093100C91E1F /* MJType.m in Sources */,
 				A472BAF61D88F804005F4417 /* SDWebImageManager.m in Sources */,
+				A424C9701DAB70FC00D58361 /* CSOriginalView.m in Sources */,
+				A424C97A1DAB815400D58361 /* CSStatusFrame.m in Sources */,
 				A47C3F441D9E093100C91E1F /* UIScrollView+MJExtension.m in Sources */,
 				040A48B51D8456DF0055F5DB /* CSNewFeatureController.m in Sources */,
 				A4A2F2471D9E63090001E70B /* CSUserParam.m in Sources */,
@@ -1001,12 +1050,14 @@
 				A47C3F3A1D9E093100C91E1F /* MJIvar.m in Sources */,
 				A472BAF31D88F804005F4417 /* SDWebImageDecoder.m in Sources */,
 				A4EE6B431D7E97EA00989515 /* CSDiscoverViewController.m in Sources */,
+				A40B51511DAB9F520072640A /* NSDate+MJ.m in Sources */,
 				A4AA22261D7ED686009DDA34 /* CSTitleButton.m in Sources */,
 				A47C3F3C1D9E093100C91E1F /* NSObject+MJCoding.m in Sources */,
 				A472BAF41D88F804005F4417 /* SDWebImageDownloader.m in Sources */,
 				A405F8751D87FFD3004E4CBC /* CSAccount.m in Sources */,
 				A47C3F461D9E093100C91E1F /* UIView+MJExtension.m in Sources */,
 				A47C3F391D9E093100C91E1F /* MJFoundation.m in Sources */,
+				A424C9731DAB711400D58361 /* CSRetweetView.m in Sources */,
 				A472BACC1D88F6B5005F4417 /* CSUser.m in Sources */,
 				A47C3F3E1D9E093100C91E1F /* NSObject+MJKeyValue.m in Sources */,
 				A4EE6B461D7E989F00989515 /* CSSearchBar.m in Sources */,
@@ -1032,6 +1083,7 @@
 				A472BAFE1D88F804005F4417 /* UIView+WebCacheOperation.m in Sources */,
 				A472BAF71D88F804005F4417 /* SDWebImagePrefetcher.m in Sources */,
 				040A48BF1D85B65A0055F5DB /* CSOAuthViewController.m in Sources */,
+				A424C9761DAB712D00D58361 /* CSStatusToolBar.m in Sources */,
 				A4F5ED0F1D79905F00BAA822 /* CSTabBar.m in Sources */,
 				040A49041D85BFA80055F5DB /* AFNetworkReachabilityManager.m in Sources */,
 				A472BAF91D88F804005F4417 /* UIImage+GIF.m in Sources */,

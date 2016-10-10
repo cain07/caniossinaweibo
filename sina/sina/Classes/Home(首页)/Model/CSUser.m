@@ -10,4 +10,10 @@
 
 @implementation CSUser
 
+- (void)setMbtype:(int)mbtype
+{
+    _mbtype = mbtype;
+    _vip = mbtype > 2;
+}
+
 @end

@@ -25,6 +25,7 @@
 
 #import "CSStatusTools.h"
 #import "CSUserTool.h"
+#import "CSStatusCell.h"
 
 @interface CSHomeViewController ()<CSCoverDelegate>
 
@@ -34,10 +35,23 @@
 
 @property (nonatomic, strong) NSMutableArray *statuses;
 
+/**
+ *  ViewModel:CZStatusFrame
+ */
+@property (nonatomic, strong) NSMutableArray *statusFrames;
+
 @end
 
 @implementation CSHomeViewController
 
+
+- (NSMutableArray *)statusFrames
+{
+    if (_statusFrames == nil) {
+        _statusFrames = [NSMutableArray array];
+    }
+    return _statusFrames;
+}
 
 -(CSOneViewController *)one{
     if (_one == nil) {
@@ -59,6 +73,10 @@
     [super viewDidLoad];
    
     [self setUpBarView];
+    
+    self.tableView.backgroundColor = [UIColor lightGrayColor];
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     [self.tableView addHeaderWithTarget:self action:@selector(loadNewStatus) ];
     [self.tableView headerBeginRefreshing];
@@ -92,8 +110,17 @@
     [CSStatusTools moreStatusWithMaxId:maxIdStr success:^(NSArray *statuses) {
         // 结束上拉刷新
         [self.tableView footerEndRefreshing];
+        
+        // 模型转换视图模型 CZStatus -> CZStatusFrame
+        NSMutableArray *statusFrames = [NSMutableArray array];
+        for (CSStatus *status in statuses) {
+            CSStatusFrame *statusF = [[CSStatusFrame alloc] init];
+            statusF.status = status;
+            [statusFrames addObject:statusF];
+        }
+        
         // 把数组中的元素添加进去
-        [self.statuses addObjectsFromArray:statuses];
+        [self.statusFrames addObjectsFromArray:statusFrames];
         
         [self.tableView reloadData];
 
@@ -123,7 +150,16 @@
         [self.tableView headerEndRefreshing];
         
         [self showNewStatusCount:statuses.count];
-        [self.statuses insertObjects:statuses atIndexes:indexSet];
+        
+        // 模型转换视图模型 CZStatus -> CZStatusFrame
+        NSMutableArray *statusFrames = [NSMutableArray array];
+        for (CSStatus *status in statuses) {
+            CSStatusFrame *statusF = [[CSStatusFrame alloc] init];
+            statusF.status = status;
+            [statusFrames addObject:statusF];
+        }
+        
+        [self.statusFrames insertObjects:statusFrames atIndexes:indexSet];
         
         [self.tableView reloadData];
     } failure:^(NSError *error) {
@@ -245,31 +281,44 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return self.statuses.count;
+    return self.statusFrames.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *ID = @"cell";
+//    static NSString *ID = @"cell";
+//    
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+//    
+//    if (cell == nil) {
+//        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+//    }
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
+    // 创建cell
+    CSStatusCell *cell = [CSStatusCell cellWithTableView:tableView];
     
     // 获取status模型
-    CSStatus *status = self.statuses[indexPath.row];
+    CSStatusFrame *statusF = self.statusFrames[indexPath.row];
     
-    // 用户昵称
-    cell.textLabel.text = status.user.name;
-    [cell.imageView sd_setImageWithURL:status.user.profile_image_url placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
-    cell.detailTextLabel.text = status.text;
+    // 给cell传递模型
+    cell.statusF = statusF;
+
+    
+    
+//    // 用户昵称
+//    cell.textLabel.text = status.user.name;
+//    [cell.imageView sd_setImageWithURL:status.user.profile_image_url placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
+//    cell.detailTextLabel.text = status.text;
 
     
     return cell;
 }
 
-
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    // 获取status模型
+    CSStatusFrame *statusF = self.statusFrames[indexPath.row];
+    
+    return statusF.cellHeight;
+}
 
 
 
