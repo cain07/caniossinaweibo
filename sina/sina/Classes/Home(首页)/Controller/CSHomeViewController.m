@@ -121,13 +121,61 @@
     [CSStatusTools newStatusWithSinceId:sinceId success:^(NSArray *statuses) {
         NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, statuses.count)];
         [self.tableView headerEndRefreshing];
+        
+        [self showNewStatusCount:statuses.count];
         [self.statuses insertObjects:statuses atIndexes:indexSet];
+        
         [self.tableView reloadData];
     } failure:^(NSError *error) {
         
     }];
  
 }
+
+#pragma mark - 展示最新的微博数
+-(void)showNewStatusCount:(int)count
+{
+    if (count == 0) return;
+    
+    // 展示最新的微博数
+    CGFloat h = 35;
+    CGFloat y = CGRectGetMaxY(self.navigationController.navigationBar.frame) - h;
+    CGFloat x = 0;
+    CGFloat w = self.view.width;
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(x, y, w, h)];
+    
+    label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"timeline_new_status_background"]];
+    label.textColor = [UIColor whiteColor];
+    label.text = [NSString stringWithFormat:@"最新微博数%d",count];
+    
+    label.textAlignment = NSTextAlignmentCenter;
+    
+    // 插入导航控制器下导航条下面
+    [self.navigationController.view insertSubview:label belowSubview:self.navigationController.navigationBar];
+    
+    
+    // 动画往下面平移
+    [UIView animateWithDuration:0.25 animations:^{
+        label.transform = CGAffineTransformMakeTranslation(0, h);
+        
+    } completion:^(BOOL finished) {
+        
+        
+        // 往上面平移
+        [UIView animateWithDuration:0.25 delay:2 options:UIViewAnimationOptionCurveLinear animations:^{
+            
+            // 还原
+            label.transform = CGAffineTransformIdentity;
+            
+        } completion:^(BOOL finished) {
+            [label removeFromSuperview];
+        }];
+        
+    }];
+    
+}
+
 
 -(void) setUpBarView{
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithImage:[UIImage imageNamed:@"navigationbar_friendsearch"] highImage:[UIImage imageNamed:@"navigationbar_friendsearch_highlighted"] target:self action:@selector(friendsearh) forControlEvents:UIControlEventTouchUpInside];

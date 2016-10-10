@@ -13,10 +13,11 @@
 #define CZUidKey @"uid"
 #define CZExpires_inKey @"exoires"
 #define CZExpires_dateKey @"date"
+#define CZName @"name"
 
 @implementation CSAccount
 
-MJCodingImplementation
+//MJCodingImplementation
 +(instancetype)accountWithDict:(NSDictionary *)dict{
     CSAccount *account = [[self alloc] init];
     
@@ -25,24 +26,26 @@ MJCodingImplementation
 }
 
 
-//-(void)encodeWithCoder:(NSCoder *)aCoder{
-//    [aCoder encodeObject:_access_token forKey:CZAccountTokenKey];
-//    [aCoder encodeObject:_expires_in forKey:CZExpires_inKey];
-//    [aCoder encodeObject:_uid forKey:CZUidKey];
-//    [aCoder encodeObject:_expires_date forKey:CZExpires_dateKey];
-//}
-//
-//-(instancetype)initWithCoder:(NSCoder *)aDecoder{
-//    if (self = [super init]) {
-//        
-//        // 一定要记得赋值
-//        _access_token =  [aDecoder decodeObjectForKey:CZAccountTokenKey];
-//        _expires_in = [aDecoder decodeObjectForKey:CZExpires_inKey];
-//        _uid = [aDecoder decodeObjectForKey:CZUidKey];
-//        _expires_date = [aDecoder decodeObjectForKey:CZExpires_dateKey];
-//    }
-//    return self;
-//}
+-(void)encodeWithCoder:(NSCoder *)aCoder{
+    [aCoder encodeObject:_access_token forKey:CZAccountTokenKey];
+    [aCoder encodeObject:_expires_in forKey:CZExpires_inKey];
+    [aCoder encodeObject:_uid forKey:CZUidKey];
+    [aCoder encodeObject:_expires_date forKey:CZExpires_dateKey];
+    [aCoder encodeObject:_name forKey:CZName];
+}
+
+-(instancetype)initWithCoder:(NSCoder *)aDecoder{
+    if (self = [super init]) {
+        
+        // 一定要记得赋值
+        _access_token =  [aDecoder decodeObjectForKey:CZAccountTokenKey];
+        _expires_in = [aDecoder decodeObjectForKey:CZExpires_inKey];
+        _uid = [aDecoder decodeObjectForKey:CZUidKey];
+        _expires_date = [aDecoder decodeObjectForKey:CZExpires_dateKey];
+        _name = [aDecoder decodeObjectForKey:CZName];
+    }
+    return self;
+}
 
 
 -(void)setExpires_in:(NSString *)expires_in{
