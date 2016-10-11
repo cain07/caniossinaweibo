@@ -10,6 +10,7 @@
 
 #import "CSStatus.h"
 #import "CSStatusFrame.h"
+#import "CSPhotosView.h"
 
 @interface CSRetweetView()
 
@@ -18,6 +19,9 @@
 
 // 正文
 @property (nonatomic, weak) UILabel *textView;
+
+// 配图
+@property (nonatomic, weak) CSPhotosView *photosView;
 
 @end
 
@@ -50,7 +54,7 @@
     // 昵称
     UILabel *nameView = [[UILabel alloc]init];
     nameView.font = CZNameFont;
-
+    nameView.textColor = [UIColor blueColor];
     [self addSubview:nameView];
     _nameView = nameView;
     
@@ -63,6 +67,11 @@
     [self addSubview:textView];
     _textView = textView;
     
+    // 配图
+    CSPhotosView *photosView = [[CSPhotosView alloc] init];
+    [self addSubview:photosView];
+    _photosView = photosView;
+    
 }
 
 
@@ -70,15 +79,20 @@
 {
     _statusF = statusF;
     
-    
     CSStatus *status = statusF.status;
     // 昵称
     _nameView.frame = statusF.retweetNameFrame;
-    _nameView.text = status.retweeted_status.user.name;
+    _nameView.text = status.retweetName;
     
     // 正文
     _textView.frame = statusF.retweetTextFrame;
     _textView.text = status.retweeted_status.text;
+    
+    // 配图
+    _photosView.frame = statusF.retweetPhotosFrame;
+    
+    _photosView.pic_urls = status.retweeted_status.pic_urls;
+
 }
 
 

@@ -84,12 +84,40 @@
     CGSize textSize = [_status.text sizeWithFont:CZTextFont constrainedToSize:CGSizeMake(textW, MAXFLOAT)];
     _originalTextFrame = (CGRect){{textX,textY},textSize};
     
+    CGFloat originH = CGRectGetMaxY(_originalTextFrame) + CZStatusCellMargin;
+    
+    // 配图
+    if (_status.pic_urls.count) {
+        CGFloat photosX = CZStatusCellMargin;
+        CGFloat photosY = CGRectGetMaxY(_originalTextFrame) + CZStatusCellMargin;
+        CGSize photosSize = [self photosSizeWithCount:_status.pic_urls.count];
+        
+        _originalPhotosFrame = (CGRect){{photosX,photosY},photosSize};
+        originH = CGRectGetMaxY(_originalPhotosFrame) + CZStatusCellMargin;
+    }
+    
     // 原创微博的frame
     CGFloat originX = 0;
     CGFloat originY = 10;
     CGFloat originW = CZScreenW;
-    CGFloat originH = CGRectGetMaxY(_originalTextFrame) + CZStatusCellMargin;
+
     _originalViewFrame = CGRectMake(originX, originY, originW, originH);
+    
+}
+
+#pragma mark - 计算配图的尺寸
+- (CGSize)photosSizeWithCount:(int)count
+{
+    // 获取总列数
+    int cols = count == 4? 2 : 3;
+    // 获取总行数 = (总个数 - 1) / 总列数 + 1
+    int rols = (count - 1) / cols + 1;
+    CGFloat photoWH = 70;
+    CGFloat w = cols * photoWH + (cols - 1) * CZStatusCellMargin;
+    CGFloat h = rols * photoWH + (rols - 1) * CZStatusCellMargin;
+    
+    
+    return CGSizeMake(w, h);
     
 }
 
@@ -113,11 +141,24 @@
     CGSize textSize = [_status.retweeted_status.text sizeWithFont:CZTextFont constrainedToSize:CGSizeMake(textW, MAXFLOAT)];
     _retweetTextFrame = (CGRect){{textX,textY},textSize};
     
+    CGFloat retweetH = CGRectGetMaxY(_retweetTextFrame) + CZStatusCellMargin;
+    // 配图
+    int count = _status.retweeted_status.pic_urls.count;
+    if (count) {
+        CGFloat photosX = CZStatusCellMargin;
+        CGFloat photosY = CGRectGetMaxY(_retweetTextFrame) + CZStatusCellMargin;
+        CGSize photosSize = [self photosSizeWithCount:count];
+        
+        _retweetPhotosFrame = (CGRect){{photosX,photosY},photosSize};
+        
+        retweetH = CGRectGetMaxY(_retweetPhotosFrame) + CZStatusCellMargin;
+    }
+    
     // 原创微博的frame
     CGFloat retweetX = 0;
     CGFloat retweetY = CGRectGetMaxY(_originalViewFrame);
     CGFloat retweetW = CZScreenW;
-    CGFloat retweetH = CGRectGetMaxY(_retweetTextFrame) + CZStatusCellMargin;
+
     _retweetViewFrame = CGRectMake(retweetX, retweetY, retweetW, retweetH);
     
 }

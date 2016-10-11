@@ -63,9 +63,6 @@
         
     }
     
-    
-    
-    
     return _created_at;
 }
 
@@ -82,6 +79,12 @@
     
     _source = source;
 
+}
+
+-(void)setRetweeted_status:(CSStatus *)retweeted_status{
+    _retweeted_status = retweeted_status;
+    
+    _retweetName = [NSString stringWithFormat:@"@%@",retweeted_status.user.name];
 }
 
 @end

@@ -55,7 +55,11 @@
 // 工具条frame
 @property (nonatomic, assign) CGRect toolBarFrame;
 
+// 配图Frame
+@property (nonatomic, assign) CGRect originalPhotosFrame;
 
+// 配图Frame
+@property (nonatomic, assign) CGRect retweetPhotosFrame;
 
 // cell的高度
 @property (nonatomic, assign) CGFloat cellHeight;

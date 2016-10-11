@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CSStatusToolBar : UIView
+@class CSStatus;
+
+@interface CSStatusToolBar : UIImageView
+
+@property (nonatomic, strong) CSStatus *status;
 
 @end

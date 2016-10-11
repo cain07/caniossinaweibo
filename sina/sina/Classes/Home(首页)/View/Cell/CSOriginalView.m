@@ -10,6 +10,7 @@
 #import "CSStatus.h"
 #import "CSStatusFrame.h"
 #import "UIImageView+WebCache.h"
+#import "CSPhotosView.h"
 
 
 @interface CSOriginalView()
@@ -35,6 +36,9 @@
 
 // 正文
 @property (nonatomic, weak) UILabel *textView;
+
+// 配图
+@property (nonatomic, weak) CSPhotosView *photosView;
 
 @end
 
@@ -102,6 +106,11 @@
     
     [self addSubview:textView];
     _textView = textView;
+    
+    // 配图
+    CSPhotosView *photosView = [[CSPhotosView alloc] init];
+    [self addSubview:photosView];
+    _photosView = photosView;
 
 }
 
@@ -147,6 +156,10 @@
     
     // 正文
     _textView.text = status.text;
+    
+    // 配图
+    _photosView.pic_urls = status.pic_urls;
+
 }
 
 - (void)setUpFrame
@@ -173,7 +186,8 @@
     // 正文
     _textView.frame = _statusF.originalTextFrame;
     
-    
+    // 配图
+    _photosView.frame = _statusF.originalPhotosFrame;
 }
 
 @end
