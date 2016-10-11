@@ -757,8 +757,8 @@
 		A4F5ECF41D79905F00BAA822 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A4EE6B4A1D7EAB2100989515 /* CSHomeViewController.h */,
 				A4EE6B4B1D7EAB2100989515 /* CSHomeViewController.m */,
+				A4EE6B4A1D7EAB2100989515 /* CSHomeViewController.h */,
 				A4AA222F1D816375009DDA34 /* CSTwoViewController.h */,
 				A4AA22301D816375009DDA34 /* CSTwoViewController.m */,
 				A4AA22311D816375009DDA34 /* CSTwoViewController.xib */,
