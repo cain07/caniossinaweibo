@@ -9,6 +9,9 @@
 #import "CSPhotosView.h"
 #import "CSPhoto.h"
 #import "UIImageView+WebCache.h"
+#import "MJPhoto.h"
+#import "MJPhotoBrowser.h"
+#import "CSPhotoView.h"
 
 @implementation CSPhotosView
 
@@ -39,12 +42,49 @@
 {
     for (int i = 0; i < 9; i++) {
             #warning TODO：设置配图的内容模式
-        UIImageView *imageV = [[UIImageView alloc] init];
+        CSPhotoView *imageV = [[CSPhotoView alloc] init];
+
         imageV.contentMode = UIViewContentModeScaleAspectFill;
         // 裁剪图片，超出控件的部分裁剪掉
         imageV.clipsToBounds = YES;
+        
+        imageV.tag = i;
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+        
+        [imageV addGestureRecognizer:tap];
+        
         [self addSubview:imageV];
     }
+}
+
+#pragma mark - 点击图片的时候调用
+- (void)tap:(UITapGestureRecognizer *)tap
+{
+    UIImageView *tapView = tap.view;
+    // CZPhoto -> MJPhoto
+    int i = 0;
+    NSMutableArray *arrM = [NSMutableArray array];
+    for (CSPhoto *photo in _pic_urls) {
+        
+        MJPhoto *p = [[MJPhoto alloc] init];
+        NSString *urlStr = photo.thumbnail_pic.absoluteString;
+        urlStr = [urlStr stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+        p.url = [NSURL URLWithString:urlStr];
+        p.index = i;
+        p.srcImageView = tapView;
+        [arrM addObject:p];
+        i++;
+    }
+    
+    
+    // 弹出图片浏览器
+    // 创建浏览器对象
+    MJPhotoBrowser *brower = [[MJPhotoBrowser alloc] init];
+    // MJPhoto
+    brower.photos = arrM;
+    brower.currentPhotoIndex = tapView.tag;
+    [brower show];
 }
 
 
